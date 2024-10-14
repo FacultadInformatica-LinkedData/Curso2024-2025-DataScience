@@ -70,6 +70,7 @@ q3 = prepareQuery('''
   ''',
   initNs = {"ns" : ns}
 )
+# Visualize the results
 for r in g.query(q3):
   print(r.individuals)
 
