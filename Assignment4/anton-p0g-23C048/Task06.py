@@ -4,7 +4,7 @@
 # **Task 06: Modifying RDF(s)**
 
 # In[46]:
-
+ 
 
 get_ipython().system('pip install rdflib')
 github_storage = "https://raw.githubusercontent.com/FacultadInformatica-LinkedData/Curso2024-2025/master/Assignment4/course_materials"
