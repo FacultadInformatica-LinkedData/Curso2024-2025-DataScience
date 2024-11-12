@@ -1,0 +1,108 @@
+@prefix : <http://namespace.com#> .
+@prefix base: <http://namespace.com#> .
+@prefix ns: <http://zonawifi.linkeddata.org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix mod: <https://w3id.org/mod#> .
+@base <http://namespace.com#> .
+
+<http://namespace.com#> rdf:type owl:Ontology ;
+			mod:createdWith <https://chowlk.linkeddata.es/> .
+
+## ns:1881
+ns:1881 rdf:type owl:NamedIndividual;
+		rdf:type ns:EntidadWifi .
+
+## ns:439723
+ns:439723 rdf:type owl:NamedIndividual;
+		rdf:type ns:CoordendaX .
+
+## ns:4476437
+ns:4476437 rdf:type owl:NamedIndividual;
+		rdf:type ns:CoordenadaY .
+
+## ns:915885737
+ns:915885737 rdf:type owl:NamedIndividual;
+		rdf:type ns:Telefono .
+
+## ns:"VenturaRodríguez(linea 3),PlazadeEspaña(linea2,3,10),SanBernando(linea2y4)yNoviciado(linea2,3y10)"
+ns:"VenturaRodríguez(linea 3),PlazadeEspaña(linea2,3,10),SanBernando(linea2y4)yNoviciado(linea2,3y10)" rdf:type owl:NamedIndividual;
+		rdf:type ns:Trasporte .
+
+## <#bibliomuscial@madrid.es>
+<#bibliomuscial@madrid.es> rdf:type owl:NamedIndividual;
+		rdf:type <#Email> .
+
+## ns:"BibliotecaHistóricaMunicipal"
+ns:"BibliotecaHistóricaMunicipal" rdf:type owl:NamedIndividual;
+		rdf:type ns:NombreEntidad .
+
+## ns:"CondeDuque"
+ns:"CondeDuque" rdf:type owl:NamedIndividual;
+		rdf:type ns:NombreDeVia .
+
+## ns:Univeridad
+ns:Univeridad rdf:type owl:NamedIndividual;
+		rdf:type ns:Barrio .
+
+## ns:Centro
+ns:Centro rdf:type owl:NamedIndividual;
+		rdf:type ns:Distrito .
+
+## ns:Madrid
+ns:Madrid rdf:type owl:NamedIndividual;
+		rdf:type ns:Ciudad .
+
+## ns:Madrid
+ns:Madrid rdf:type owl:NamedIndividual;
+		rdf:type ns:Provincia .
+
+## ns:"http
+ns:"http rdf:type owl:NamedIndividual;
+		rdf:type ns:URLDeContenido .
+
+## ns:contenido_entidadesYorganismos_BibliotecasPatrimoniales
+ns:contenido_entidadesYorganismos_BibliotecasPatrimoniales rdf:type owl:NamedIndividual;
+		rdf:type ns:TipoEntidadWifi .
+
+## ns:4042737760210630
+ns:4042737760210630 rdf:type owl:NamedIndividual;
+		rdf:type ns:Latitud .
+
+## ns:-37106116887809800
+ns:-37106116887809800 rdf:type owl:NamedIndividual;
+		rdf:type ns:Longitud .
+
+ns:1881 ns:tenerCoordenadaY ns:4476437 .
+ns:1881 ns:tenerCoordendaX ns:439723 .
+ns:1881 ns:tenerTelefono ns:915885737 .
+ns:1881 ns:estarEnVia ns:"CondeDuque" .
+ns:1881 ns:tenerNombre ns:"BibliotecaHistóricaMunicipal" .
+ns:1881 ns:tenerEmail <#bibliomuscial@madrid.es> .
+ns:1881 ns:tenerURL ns:"http .
+ns:1881 ns:llegarConTransporte ns:"VenturaRodríguez(linea 3),PlazadeEspaña(linea2,3,10),SanBernando(linea2y4)yNoviciado(linea2,3y10)" .
+ns:1881 ns:serDeTipo ns:contenido_entidadesYorganismos_BibliotecasPatrimoniales .
+ns:1881 ns:tenerLatitud ns:4042737760210630 .
+ns:1881 <#Text> ns:-37106116887809800 .
+ns:1881 ns:accesibilidad "1,6"^^xsd:string .
+ns:1881 ns:estarEnVia "Conde Duque" .
+ns:1881 ns:tenerNombre " Biblioteca Histórica Municipal" .
+ns:1881 ns:tenerURL "http://www.madrid.es/sites/v/index.jspvgnextchannel=bfa48ab43d6bb410VgnVCM100000171fa0aRCRD&vgnextoid=ccbc3d0b5e71c010VgnVCM1000000B205A0Arcrd" .
+ns:1881 ns:llegarConTransporte "Ventura Rodríguez(linea  3),Plaza de España (linea 2,3,10),San Bernando(linea 2 y 4) y Noviciado(linea 2,3 y10)" .
+ns:"CondeDuque" ns:estarEnBarrio ns:Univeridad .
+ns:"CondeDuque" ns:numero "9"^^xsd:integer .
+ns:"CondeDuque" ns:tipoNum "V"^^xsd:string .
+ns:"CondeDuque" ns:tipoDeVia "Calle"^^xsd:strign .
+ns:"CondeDuque" ns:codigoPostal "28015"^^xsd:string .
+ns:Univeridad ns:estarEnDistrito ns:Centro .
+ns:Univeridad ns:codigoDeBarrio "5"^^xsd:intenger .
+ns:Centro ns:estarEnCiudad ns:Madrid .
+ns:Centro ns:codigoDeDistrito "1"^^xsd:intenger .
+ns:Madrid ns:estarEnProvincia ns:Madrid .
+

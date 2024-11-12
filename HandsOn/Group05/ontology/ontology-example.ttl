@@ -1,0 +1,72 @@
+@prefix : <http://www.knowledgegraphs/ontology/> .
+@prefix ns: <http://www.knowledgegraphs.com/ontology/centrosydesfibriladores#> .
+@prefix rs: <http://www.knowledgegraphs.com/resource/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mod: <https://w3id.org/mod#> .
+@base <http://www.knowledgegraphs/ontology/> .
+
+: a owl:Ontology .
+
+rs:MedicinaGeneral a ns:Especialidad ;
+    rdfs:label "Medina general" .
+
+rs:Podologia a ns:Especialidad ;
+    rdfs:label "Podología" .
+
+rs:Fisioterapia a ns:Especialidad ;
+    rdfs:label "Fisioterapia" .
+
+rs:Enfermeria a ns:Especialidad ;
+    rdfs:label "Enfermería" .
+
+rs:TerapiaOcupacional a ns:Especialidad ;
+    rdfs:label "Terapia ocupacional" .
+
+rs:Parla a ns:Municipio ;
+    rdfs:label "Parla" .
+
+rs:Direccion1 a ns:Direccion ;
+    rdfs:label "Direccion 1" ;
+    ns:perteneceA rs:Parla ;
+    ns:tipoDireccion "Calle"^^xsd:string ;
+    ns:nombreDireccion "Pinto"^^xsd:string ;
+    ns:numeroDireccion "58"^^xsd:integer ;
+    ns:codigoPostal "28982"^^xsd:integer ;
+    ns:coordenadaX "435029"^^xsd:float ;
+    ns:coordenadaY "445612"^^xsd:float .
+
+rs:CentrodeSalud1 rdf:type ns:CentrodeSalud ;
+    rdfs:label "Centro de salud 1" ;
+    ns:especializadoEn rs:MedicinaGeneral ,
+                       rs:Podologia ,
+                       rs:Fisioterapia ,
+                       rs:Enfermeria ,
+                       rs:TerapiaOcupacional ;
+    ns:localizadoEn rs:Direccion1 ;
+    ns:idCentro "SS01607"^^xsd:string .
+    
+rs:Establecimiento1 a ns:Establecimiento ;
+    rdfs:label "Establecimiento 1" ;
+    ns:tipoEstablecimiento "Otros"^^xsd:string ;
+    ns:tipoTitularidad "Privada"^^xsd:string .
+
+rs:Madrid a ns:Municipio ;
+    rdfs:label "Madrid" .
+
+rs:Direccion2 a ns:Direccion ;
+    rdfs:label "Direccion 2" ;
+    ns:perteneceA rs:Madrid ;
+    ns:tipoDireccion "Calle"^^xsd:string ;
+    ns:nombreDireccion "de Suero de Quiñones"^^xsd:string ;
+    ns:numeroDireccion "34"^^xsd:integer ;
+    ns:codigoPostal "28002"^^xsd:integer ;
+    ns:coordenadaX "443575"^^xsd:float ;
+    ns:coordenadaY "4477573"^^xsd:float .
+
+rs:Desfibrilador1 a ns:Desfibrilador ;
+    rdfs:label "Desfibrilador 1" ;
+    ns:albergadoEn rs:Establecimiento1 ;
+    ns:localizadoEn rs:Direccion2 ;
+    ns:idDesfibrilador "2018-1577"^^xsd:string .

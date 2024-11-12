@@ -1,0 +1,74 @@
+@prefix : <http://ws.com/base#> .
+@prefix ns: <http://ws.com/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns:Accidente_2024S000123 a ns:Accidente ;
+    ns:numExpediente "2024S000123" ;
+    ns:Fecha "05-07-2024"^^xsd:date ;
+    ns:Hora "17:45:00"^^xsd:time ;
+    ns:tipoAccidente "Colisión múltiple" ;
+    ns:estadoMeteorologico "Despejado" ;
+    ns:tipoVehiculo "Turismo" ;
+    ns:ubicadoEn ns:Ubicacion_001 ;
+    ns:personaImplicada ns:Persona_001 ;
+    ns:implicaConsumoDe ns:Sustancia_001 .
+
+ns:Persona_001 a ns:Persona ;
+    ns:tipoPersona "Conductor" ;
+    ns:rangoEdad "De 30 a 34 años" ;
+    ns:sexo "Hombre" ;
+    ns:tipoLesion ns:Lesion_001 .
+
+ns:Lesion_001 a ns:Lesion ;
+    ns:codigoLesividad 14 ;
+    ns:lesividad "Sin asistencia sanitaria" .
+
+ns:Ubicacion_001 a ns:Ubicacion ;
+    ns:localizacion "AUTOV. M-30, 14XL24" ;
+    ns:numero "14XL24";
+    ns:tieneDistrito ns:infoDistrito_12 .
+    ns:tieneCoordenadas ns:Coordenadas_001;
+
+ns:Coordenadas_001 a ns:Coordenadas ;
+    ns:coordenadaX "440425" ;
+    ns:coordenadaY "4471576" .
+
+ns:Sustancia_001 a ns:Sustancia ;
+    ns:positivaAlcohol "N" ;
+    ns:positivaDroga "NULL";
+
+ns:infoDistrito_12 a ns:infoDistrito ;
+    ns:codDistrito 12 ;
+    ns:distrito "USERA" .
+
+ns:Radar_M30_12 a ns:Radar ;
+    ns:numRadar "28" ;
+    ns:tipo "Radar de tramo" ;
+    ns:velocidadLimite 50 ;
+    ns:responsable "DGP" ;
+    ns:ubicadoEn ns:Localizacion_Radar_001 .
+
+ns:Localizacion_Radar_001 a ns:Localizacion ;
+    ns:ubicacion "AVENIDA DE CÓRDOBA CON CALLE DOCTOR TOLOSA LATOUR, SENTIDO GLORIETA DE MÁLAGA" ;
+    ns:implica ns:InfoCarretera_001.
+
+ns:InfoCarretera_001 a ns:InfoCarretera ;
+    ns:carretera "AVENIDA DE CÓRDOBA" ;
+    ns:pk "300" ;
+    ns:sentido "Salida" ;
+    ns:carril "Salida, radar de tramo" .
+    ns:tiene ns:inicioTramo001
+
+
+ns:Coordenadas_002 a ns:inicioTramo ;
+    ns:coordenadaX -3699380 ;
+    ns:coordenadaY 40387572 .
+    
+ns:Coordenadas_002 a ns:CoordenadaWGS84 ;
+    ns:coordenadaX 44087300 ;
+    ns:coordenadaY 447002529 .
+
+ns:Coordenadas_002 a ns:CoordenadasLongLat ;
+    ns:coordenadaX -3696519 ;
+    ns:coordenadaY 40378590 .
+

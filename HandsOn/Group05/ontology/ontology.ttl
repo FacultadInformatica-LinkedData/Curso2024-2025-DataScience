@@ -1,0 +1,116 @@
+@prefix : <http://www.knowledgegraphs/ontology/> .
+@prefix ns: <http://www.knowledgegraphs/ontology/centrosydesfibriladores#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix mod: <https://w3id.org/mod#> .
+@base <http://www.knowledgegraphs/ontology/> .
+
+: a owl:Ontology ;
+			mod:createdWith <https://chowlk.linkeddata.es/> .
+
+
+ns:albergadoEn a owl:ObjectProperty ;
+		rdfs:domain ns:Desfibrilador ;
+		rdfs:range ns:Establecimiento ;
+		rdfs:label "albergado en" .
+
+
+ns:localizadoEn rdf:type owl:ObjectProperty ;
+		rdfs:domain ns:CentrodeSalud ;
+		rdfs:range ns:Direccion ;
+		rdfs:label "localizado en" .
+
+
+ns:especializadoEn rdf:type owl:ObjectProperty ;
+		rdfs:domain ns:CentrodeSalud ;
+		rdfs:range ns:Especialidad ;
+		rdfs:label "especializado en" .
+
+
+ns:perteneceA rdf:type owl:ObjectProperty ;
+		rdfs:range ns:Municipio ;
+		rdfs:label "pertenece a" .
+
+
+ns:tipoDireccion rdf:type owl:DatatypeProperty ;
+		rdfs:domain ns:Direccion ;
+		rdfs:range xsd:string ;
+		rdfs:label "tipo direccion" .
+
+
+ns:nombreDireccion rdf:type owl:DatatypeProperty ;
+		rdfs:domain ns:Direccion ;
+		rdfs:range xsd:string ;
+		rdfs:label "nombre direccion" .
+
+
+ns:numeroDireccion rdf:type owl:DatatypeProperty ;
+		rdfs:domain ns:Direccion ;
+		rdfs:range xsd:integer ;
+		rdfs:label "numero direccion" .
+
+
+ns:codigoPostal rdf:type owl:DatatypeProperty ;
+		rdfs:domain ns:Direccion ;
+		rdfs:range xsd:integer ;
+		rdfs:label "codigo postal" .
+
+
+ns:coordenadaX rdf:type owl:DatatypeProperty ;
+		rdfs:domain ns:Direccion ;
+		rdfs:range xsd:float ;
+		rdfs:label "coordenada x" .
+
+
+ns:coordenadaY rdf:type owl:DatatypeProperty ;
+		rdfs:domain ns:Direccion ;
+		rdfs:range xsd:float ;
+		rdfs:label "coordenada y" .
+
+
+ns:tipoEstablecimiento rdf:type owl:DatatypeProperty ;
+		rdfs:domain ns:Establecimiento ;
+		rdfs:range xsd:string ;
+		rdfs:label "tipo establecimiento" .
+
+ns:tipoTitularidad rdf:type owl:DatatypeProperty ;
+		rdfs:domain ns:Establecimiento ;
+		rdfs:range xsd:string ;
+		rdfs:label "tipo titularidad" .
+
+
+ns:idCentro rdf:type owl:DatatypeProperty ;
+		rdfs:domain ns:CentrodeSalud ;
+		rdfs:range xsd:string ;
+		rdfs:label "id centro" .
+
+
+ns:idDesfibrilador rdf:type owl:DatatypeProperty ;
+		rdfs:domain ns:Desfibrilador ;
+		rdfs:range xsd:string ;
+		rdfs:label "id desfibrilador" .
+
+
+ns:CentrodeSalud rdf:type owl:Class ;
+	rdfs:label "Centrode Salud" .
+
+
+ns:Especialidad rdf:type owl:Class ;
+	rdfs:label "Especialidad" .
+
+
+ns:Municipio rdf:type owl:Class ;
+	rdfs:label "Municipio" .
+
+
+ns:Direccion rdf:type owl:Class ;
+	rdfs:label "Direccion" .
+
+
+ns:Establecimiento rdf:type owl:Class ;
+	rdfs:label "Establecimiento" .
+
+
+ns:Desfibrilador rdf:type owl:Class ;
+	rdfs:label "Desfibrilador" .

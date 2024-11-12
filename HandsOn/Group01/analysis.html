@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>analysis.html</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #555;
+        }
+        p {
+            margin: 5px 0;
+        }
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Análisis de Fuentes de Datos</h1>
+
+    <section>
+        <h2>Análisis Realizado sobre las Fuentes de Datos</h2>
+        <p>Se han llevado a cabo análisis detallados en dos conjuntos de datos clave para la seguridad vial y la gestión del tráfico en el contexto de ciudades inteligentes:</p>
+        <ul>
+            <li><strong>Accidentalidad (Madrid 2024):</strong> Este conjunto de datos detalla los incidentes de tráfico en Madrid, incluyendo atributos como la fecha, hora, localización georreferenciada, tipo de accidente, condiciones del tiempo, y factores que contribuyeron a los accidentes. El análisis se enfocó en identificar patrones temporales y espaciales para la planificación de medidas preventivas.</li>
+            <li><strong>Radares Fijos (Madrid):</strong> Este conjunto contiene la ubicación y características de los radares fijos de tráfico en Madrid, con información georreferenciada y datos sobre la velocidad máxima permitida. Se evaluó la distribución geográfica de estos dispositivos y su impacto potencial en la seguridad vial.</li>
+        </ul>
+        <p>El procesamiento de los datos implicó la limpieza y normalización, la validación de ubicaciones geográficas, y la preparación para análisis avanzados de seguridad y gestión del tráfico.</p>
+    </section>
+
+    <section>
+        <h2>Licencia de las Fuentes de Datos y Licencia Potencial</h2>
+        <p>Ambos conjuntos de datos están licenciados bajo condiciones que permiten su reutilización tanto para propósitos comerciales como no comerciales, siempre que se respeten los siguientes términos:</p>
+        <ul>
+            <li>No desnaturalizar el sentido de la información.</li>
+            <li>Citar la fuente de los datos: "Origen de los datos: Comunidad de Madrid y Ayuntamiento de Madrid".</li>
+            <li>Mencionar la fecha de la última actualización si se proporciona.</li>
+            <li>No dar a entender que las autoridades apoyan o patrocinan la reutilización realizada.</li>
+            <li>Conservar los metadatos relacionados con la actualización y las condiciones de reutilización.</li>
+            <li>Está prohibido intentar re-identificar datos anonimizados.</li>
+        </ul>
+        <p>Una licencia potencial para la reutilización podría ser una licencia Creative Commons (CC BY 4.0) que permita la redistribución y modificación de los datos con atribución adecuada.</p>
+    </section>
+
+    <section>
+        <h2>Estrategia de Nombres de Recursos Definida</h2>
+        <p>La estrategia de nombres de recursos asegura claridad y consistencia para una gestión eficiente:</p>
+        <ul>
+            <li><strong>Base:</strong> <span class="ttl">http://websemantica/base#</span></li>
+            <li><strong>Accidentes:</strong> <span class="ttl">{base}Accidente/{numExpediente}</span></li>
+            <li><strong>Radares:</strong> <span class="ttl">{base}Radar/{carretera}/{pk}</span></li>
+        </ul>
+    </section>
+</body>
+</html>

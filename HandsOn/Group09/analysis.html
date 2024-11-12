@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang ="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Analisis de los datos y estrategia de nombrado y licencias.</title>
+            <style>
+                
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                }
+        
+                
+                th, td {
+                    border: 2px solid black;
+                    padding: 10px;
+                    text-align: center;
+                }
+        
+                th {
+                    background-color: blue;
+                    color: white;
+                }
+        
+            </style>
+        </head>
+    <body>
+        <header>
+            <h1>Analisis</h1>
+            <p>En este documento se va a realizar un analisis de los datos, se va a analizar las licencias de los datos originales, establecer las licencias de nuestro data set y finalmente describir la estrategia de nombrado que vamos a emplear.</p>
+        </header>
+
+        <section>
+            <h1>Tabla analisis de los datos del csv</h1>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Column</th>
+                    <th>Type</th>
+                    <th>Comments/Range</th>
+                    <th>Problems</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>PK</td>
+                    <td>String</td>
+                    <td>Unique values</td>
+                    <td></td>
+                    <td>Campo clave, dentro de la web municipal, para uso interno.</td>
+                  </tr>
+                  <tr>
+                    <td>NOMBRE</td>
+                    <td>String</td>
+                    <td>Unique values</td>
+                    <td></td>
+                    <td>Nombre de la entidad</td>
+                  </tr>
+                  <tr>
+                    <td>DESCRIPCION-ENTIDAD</td>
+                    <td>string</td>
+                    <td>Not unique, empty values </td>
+                    <td></td>
+                    <td>Descripcion de la entidad donde se ubican los puntos wifi</td>
+                  </tr>
+                  <tr>
+                    <td>HORARIO</td>
+                    <td>String</td>
+                    <td>Not unique, empty values </td>
+                    <td></td>
+                    <td>Horario de las entidades</td>
+                  </tr>
+                  <tr>
+                    <td>EQUIPAMIENTO</td>
+                    <td>string</td>
+                    <td>Not unique, empty values </td>
+                    <td></td>
+                    <td>Detalle de espacios internos especializados</td>
+                  </tr>
+                  <tr>
+                    <td>TRANSPORTE</td>
+                    <td>string</td>
+                    <td>Not unique, empty values </td>
+                    <td></td>
+                    <td>Estaciones de metro e indicacion de lineas</td>
+                  </tr>
+                  <tr>
+                    <td>DESCRIPCION</td>
+                    <td>String</td>
+                    <td>Not unique, empty values </td>
+                    <td></td>
+                    <td>Informacion adicional</td>
+                  </tr>
+                  <tr>
+                    <td>ACCESIBILIDAD</td>
+                    <td>String</td>
+                    <td>Not unique</td>
+                    <td></td>
+                    <td>0 = No accesible, 1 = Accesible, 2 = Instalación parcialmente accesible para personas con
+                      movilidad reducida, 3 = Sin información sobre accesibilidad para personas con movilidad reducida, 4 = Lengua de
+                      signos, 5 = Señalización podotáctil, 6 = Bucle de inducción magnético</td>
+                  </tr>
+                  <tr>
+                    <td>CONTENT-URL</td>
+                    <td>string</td>
+                    <td>Unique, (url)</td>
+                    <td></td>
+                    <td>Nombre del recurso en  internet</td>
+                  </tr>
+                  <tr>
+                    <td>NOMBRE-VIA</td>
+                    <td>String</td>
+                    <td>Not unique</td>
+                    <td></td>
+                    <td>Denominacion vial</td>
+                  </tr>
+                  <tr>
+                    <td>CLASE-VIAL</td>
+                    <td>String</td>
+                    <td>Not unique</td>
+                    <td></td>
+                    <td>Tipo vial</td>
+                  </tr>
+                  <tr>
+                    <td>TIPO-NUM</td>
+                    <td>String</td>
+                    <td>Not unique</td>
+                    <td>Tiene valores no reconocidos en la documentacion</td>
+                    <td>S/N, KM, V</td>
+                  </tr>
+                  <tr>
+                    <td>NUM</td>
+                    <td>Integer</td>
+                    <td>0-350</td>
+                    <td>Empty values</td>
+                    <td>Numero de equipamiento en la via</td>
+                  </tr>
+                  <tr>
+                    <td>PLANTA</td>
+                    <td>String</td>
+                    <td>Not unique, empty values</td>
+                    <td></td>
+                    <td>Nivel que ocupa el inmueble</td>
+                  </tr>
+                  <tr>
+                    <td>Puerta</td>
+                    <td></td>
+                    <td>Empty values</td>
+                    <td>All empty</td>
+                    <td>Puerta que ocupa el inmueble</td>
+                  </tr>
+                  <tr>
+                    <td>ESCALERAS</td>
+                    <td></td>
+                    <td>Empty values</td>
+                    <td>All empty</td>
+                    <td>Escalerad de acceso</td>
+                  </tr>
+                  <tr>
+                    <td>ORIENTACION</td>
+                    <td>String</td>
+                    <td>Not unique, empty values</td>
+                    <td></td>
+                    <td>Proporciona informacion para acceder a la direccion</td>
+                  </tr>
+                  <tr>
+                    <td>LOCALIDAD</td>
+                    <td>String</td>
+                    <td>All are Madrid</td>
+                    <td></td>
+                    <td>Localidad donde se ubica la entidad</td>
+                  </tr>
+                  <tr>
+                    <td>PROVINCIA</td>
+                    <td>String</td>
+                    <td>All are Madrid</td>
+                    <td></td>
+                    <td>Provincia donde se ubica la entidad</td>
+                  </tr>
+                  <tr>
+                    <td>CODIGO-POSTAL</td>
+                    <td>String</td>
+                    <td>Not unique, empty values</td>
+                    <td></td>
+                    <td>Codigo postal del equipamiento</td>
+                  </tr>
+                  <tr>
+                    <td>COD-BARRIO</td>
+                    <td>String</td>
+                    <td>Not unique, empty values</td>
+                    <td></td>
+                    <td>Codigo del barrio donde esta ubicada la entidad</td>
+                  </tr>
+                  <tr>
+                    <td>BARRIO</td>
+                    <td>String</td>
+                    <td>Not unique, empty values</td>
+                    <td></td>
+                    <td>Barrio donde esta ubicada la entidad</td>
+                  </tr>
+                  <tr>
+                    <td>COD-DISTRITO</td>
+                    <td>String</td>
+                    <td>Not unique, empty values</td>
+                    <td></td>
+                    <td>Codigo del distrito donde esta ubicada la entidad</td>
+                  </tr>
+                  <tr>
+                    <td>DISTRITO</td>
+                    <td>String</td>
+                    <td>Not unique</td>
+                    <td></td>
+                    <td>Distrito donde esta ubicada la entidad</td>
+                  </tr>
+                  <tr>
+                    <td>COORDENDA-X</td>
+                    <td>Integer</td>
+                    <td>433,000-452,000</td>
+                    <td></td>
+                    <td>Coordenadas de 6 caracteres sobre el plano de la ciudad</td>
+                  </tr>
+                  <tr>
+                    <td>COORDENADA-Y</td>
+                    <td>Integer</td>
+                    <td>4,465,000-4,486,000</td>
+                    <td></td>
+                    <td>Coordenadas de 7 caracteres sobre el plano de la ciudad</td>
+        
+                  </tr>
+                  <tr>
+                    <td>LATITUD</td>
+                    <td>Decimal</td>
+                    <td>40.33-40.52</td>
+                    <td></td>
+                    <td>Coordenada latitud en el sistema de referencia WGS84</td>
+                  </tr>
+                  <tr>
+                    <td>LONGITUD</td>
+                    <td>Decimal</td>
+                    <td>-3.79--3.57</td>
+                    <td></td>
+                    <td>Coordenada longitud en el sistema de referencia WGS84</td>
+                  </tr>
+                  <tr>
+                    <td>TELEFONO</td>
+                    <td>string</td>
+                    <td>Not unique, empty values</td>
+                    <td></td>
+                    <td>Telefonos de contacto</td>
+                  </tr>
+                  <tr>
+                    <td>FAX</td>
+                    <td>String</td>
+                    <td>Empty values</td>
+                    <td>Only one value</td>
+                    <td>Numero de  fax para contacto</td>
+                  </tr>
+                  <tr>
+                    <td>EMAIL</td>
+                    <td>String</td>
+                    <td>Not unique, empty values</td>
+                    <td></td>
+                    <td>Direccion de correo electronico de la entidad</td>
+                  </tr>
+                  <tr>
+                    <td>TIPO</td>
+                    <td>String</td>
+                    <td>Not unique, empty values</td>
+                    <td></td>
+                    <td>Descripcion de la tipologia de la instalacion</td>
+                  </tr>
+                  <tr>
+                </tbody>
+              </table>
+        </section>
+
+        <section id="requisitos-opcionales">
+            <h2>Establecer licencias</h2>
+
+            <article id="Licencias de los datos">
+                <h3>Licencias de los datos </h3>
+                <p>Las licencias de los datos originales, es que pueden utilizar con fines comerciales, y cualquier otro uso mientras que no se utilice con fines de la administracion publica</p>
+            </article>
+
+            <article id="Nuestras licencias">
+                <h3>Licencias de nuestro dataser </h3>
+                <p>Nuestro dataset va poder ser utllizado libremente por cualquier persona, la unica modificaicon que permitimos es la de añadir informacion al dataset. Esto se puede realizar si se cumplen las siguientes condiciones que se describen a continuacion:</p>
+                <ul>
+                    <li>Es obligatorio incluir una referencia explicita de los autores originales, siendo necesario mencionar los nombres de los creadores del dataset</li>
+                    <li>El contenido del dataset puede ser exclusivamente utilizado para fines licitos, legales y eticos. Cualquier uso que prohiban las leyes esta totalmente prohibido</li>
+                </ul>
+            </article>
+        </section>
+        <section id="Estrategia de nombrado">
+            <h3>Estrategia de nombrado</h3> 
+            <p>Nuestra estrategia de nombrado va a incluir los siguientes aspectos:</p>
+            <ul>
+                <li>El namespace que vamos a utilizar es el siguiente:  http://zonawifi.linkeddata.org#</li>
+                <li>Los recursos que vamos a utilizar son los siguientes:</li>
+                <ul>
+                    <li>Ciudad</li>
+                    <li>EntidadWifi</li>
+                    <li>Barrio</li>
+                    <li>Distrito</li>
+                    <li>CoordenadaX</li>
+                    <li>CoordenadaY</li>
+                    <li>Telefono</li>
+                    <li>Email</li>
+                    <li>TipoEntidadWifi</li>
+                    <li>Nombre</li>
+                    <li>Provincia</li>
+                    <li>URLDeContenido</li>
+                    <li>NombreVia</li>
+                    <li>Transporte</li>
+                    <li>NombreEntidadWifi</li>
+                    <li>PK</li>
+                    <li>FAX</li>
+                    <li>Latitud</li>
+                    <li>Longitud</li>
+                </ul>
+                <li>Las relaciones que vamos a utilizar son las siguientes</li>
+                <ul>
+                  <li>descripcion</li>
+                  <li>codigoPostal</li>
+                  <li>accesibilidad</li>
+                  <li>codigoDistrito</li>
+                  <li>codigoBarrio</li>
+                  <li>descripcionEntidad</li>
+                  <li>equipamiento</li>
+                  <li>escaleras</li>
+                  <li>estarEnBarrio</li>
+                  <li>estarEnCiudad</li>
+                  <li>estarEnDistrito</li>
+                  <li>estarEnDistrito</li>
+                  <li>estarEnVia</li>
+                  <li>horario</li>
+                  <li>llegarConTransporte</li>
+                  <li>numero</li>
+                  <li>orientacion</li>
+                  <li>planta</li>
+                  <li>puerta</li>
+                  <li>serDeTipo</li>
+                  <li>tenerCoordenadaX</li>
+                  <li>tenerCoordenadaY</li>
+                  <li>tenerEmail</li>
+                  <li>tenerFAX</li>
+                  <li>tenerLatitud</li>
+                  <li>tenerLongitud</li>
+                  <li>tenerNombre</li>
+                  <li>tenerTelefono</li>
+                  <li>tenerURL</li>
+                  <li>tipoDeVia</li>
+                  <li>tipoNum</li>
+
+
+
+                </ul>   
+            </ul>
+        </section>
+    </body>
+</html>
+
+
+
+<body>
+
+    
+</body>
