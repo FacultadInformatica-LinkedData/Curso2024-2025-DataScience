@@ -1,0 +1,161 @@
+@prefix hv: <http://londonhousing.linkeddata.es/house/ontology#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vf: <http://londonschool.linkeddata.es/school/ontology#> .
+
+hv: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+hv:datatype a owl:DatatypeProperty ;
+    rdfs:label "datatype" ;
+    rdfs:domain hv:AveragePrice,
+        hv:Date,
+        hv:Id,
+        hv:housesSold .
+
+hv:dateRecorded a owl:ObjectProperty ;
+    rdfs:label "date recorded" ;
+    rdfs:domain hv:House ;
+    rdfs:range hv:Date .
+
+hv:hasAveragePrice a owl:ObjectProperty ;
+    rdfs:label "has average price" ;
+    rdfs:domain hv:House ;
+    rdfs:range hv:AveragePrice .
+
+hv:hasHouseId a owl:ObjectProperty ;
+    rdfs:label "has house id" ;
+    rdfs:domain hv:House ;
+    rdfs:range hv:Id .
+
+hv:placedIn a owl:ObjectProperty ;
+    rdfs:label "placed in" ;
+    rdfs:domain hv:House ;
+    rdfs:range vf:Town .
+
+hv:sold a owl:ObjectProperty ;
+    rdfs:label "sold" ;
+    rdfs:domain hv:House ;
+    rdfs:range hv:housesSold .
+
+vf:datatype a owl:DatatypeProperty ;
+    rdfs:label "datatype" ;
+    rdfs:domain vf:Address,
+        vf:Gender,
+        vf:Id,
+        vf:Name,
+        vf:Phase,
+        vf:Status,
+        vf:Town,
+        vf:Type,
+        vf:Wardname,
+        vf:x,
+        vf:y .
+
+vf:hasAddress a owl:ObjectProperty ;
+    rdfs:label "has address" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:Address .
+
+vf:hasGender a owl:ObjectProperty ;
+    rdfs:label "has gender" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:Gender .
+
+vf:hasName a owl:ObjectProperty ;
+    rdfs:label "has name" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:Name .
+
+vf:hasPhase a owl:ObjectProperty ;
+    rdfs:label "has phase" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:Phase .
+
+vf:hasSchoolID a owl:ObjectProperty ;
+    rdfs:label "has school i d" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:Id .
+
+vf:hasStatus a owl:ObjectProperty ;
+    rdfs:label "has status" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:Status .
+
+vf:hasType a owl:ObjectProperty ;
+    rdfs:label "has type" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:Type .
+
+vf:hasWardname a owl:ObjectProperty ;
+    rdfs:label "has wardname" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:Wardname .
+
+vf:hasX a owl:ObjectProperty ;
+    rdfs:label "has x" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:x .
+
+vf:hasY a owl:ObjectProperty ;
+    rdfs:label "has y" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:y .
+
+vf:placedIn a owl:ObjectProperty ;
+    rdfs:label "placed in" ;
+    rdfs:domain vf:School ;
+    rdfs:range vf:Town .
+
+hv:AveragePrice a owl:Class ;
+    rdfs:label "Average Price" .
+
+hv:Date a owl:Class ;
+    rdfs:label "Date" .
+
+hv:Id a owl:Class ;
+    rdfs:label "Id" .
+
+hv:housesSold a owl:Class ;
+    rdfs:label "houses Sold" .
+
+vf:Address a owl:Class ;
+    rdfs:label "Address" .
+
+vf:Gender a owl:Class ;
+    rdfs:label "Gender" .
+
+vf:Id a owl:Class ;
+    rdfs:label "Id" .
+
+vf:Name a owl:Class ;
+    rdfs:label "Name" .
+
+vf:Phase a owl:Class ;
+    rdfs:label "Phase" .
+
+vf:Status a owl:Class ;
+    rdfs:label "Status" .
+
+vf:Type a owl:Class ;
+    rdfs:label "Type" .
+
+vf:Wardname a owl:Class ;
+    rdfs:label "Wardname" .
+
+vf:x a owl:Class ;
+    rdfs:label "x" .
+
+vf:y a owl:Class ;
+    rdfs:label "y" .
+
+vf:Town a owl:Class ;
+    rdfs:label "Town" .
+
+hv:House a owl:Class ;
+    rdfs:label "House" .
+
+vf:School a owl:Class ;
+    rdfs:label "School" .
+

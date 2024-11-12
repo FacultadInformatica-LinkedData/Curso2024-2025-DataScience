@@ -1,0 +1,114 @@
+@prefix hv: <http://londonhousing.linkeddata.es/house/ontology#> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vf: <http://londonschool.linkeddata.es/school/ontology#> .
+
+hv: a owl:Ontology ;
+    mod:createdWith <https://chowlk.linkeddata.es/> .
+
+<http://londonhousing.linkeddata.es/house/ontology#House1> a owl:NamedIndividual ;
+    hv:Id <http://londonhousing.linkeddata.es/house/ontology#81657> ;
+    hv:hasAveragePrice <http://londonhousing.linkeddata.es/house/ontology#206464> ;
+    hv:hasTown <http://londonhousing.linkeddata.es/house/ontology#Southall> ;
+    hv:sold <http://londonhousing.linkeddata.es/house/ontology#379> ;
+    hv:type hv:House .
+
+<http://londonhousing.linkeddata.es/house/ontology#School1> a owl:NamedIndividual ;
+    vf:hasAddress <http://londonhousing.linkeddata.es/house/ontology#165-169TheBroadway> ;
+    vf:hasGender <http://londonhousing.linkeddata.es/house/ontology#Girls> ;
+    vf:hasPhase <http://londonhousing.linkeddata.es/house/ontology#Notapplicable> ;
+    vf:hasSchoolId <http://londonhousing.linkeddata.es/house/ontology#1> ;
+    vf:hasStatus <http://londonhousing.linkeddata.es/house/ontology#open> ;
+    vf:hasTown <http://londonhousing.linkeddata.es/house/ontology#Southall> ;
+    vf:hasType <http://londonhousing.linkeddata.es/house/ontology#OtherIndependentSchool> ;
+    vf:hasWardname <http://londonhousing.linkeddata.es/house/ontology#SouthallBroadway> ;
+    vf:type vf:School ;
+    vf:x <http://londonhousing.linkeddata.es/house/ontology#-0.378496> ;
+    vf:y <http://londonhousing.linkeddata.es/house/ontology#51.5074997> .
+
+hv:Id a owl:ObjectProperty ;
+    rdfs:label "id" .
+
+hv:hasAveragePrice a owl:ObjectProperty ;
+    rdfs:label "has average price" .
+
+hv:hasTown a owl:ObjectProperty ;
+    rdfs:label "has town" .
+
+hv:sold a owl:ObjectProperty ;
+    rdfs:label "sold" .
+
+hv:type a owl:ObjectProperty ;
+    rdfs:label "type" .
+
+vf:hasAddress a owl:ObjectProperty ;
+    rdfs:label "has address" .
+
+vf:hasGender a owl:ObjectProperty ;
+    rdfs:label "has gender" .
+
+vf:hasName a owl:ObjectProperty ;
+    rdfs:label "has name" ;
+    rdfs:range <http://londonhousing.linkeddata.es/house/ontology#AyeshaSiddiaGirlSchool> .
+
+vf:hasPhase a owl:ObjectProperty ;
+    rdfs:label "has phase" .
+
+vf:hasSchoolId a owl:ObjectProperty ;
+    rdfs:label "has school id" .
+
+vf:hasStatus a owl:ObjectProperty ;
+    rdfs:label "has status" .
+
+vf:hasTown a owl:ObjectProperty ;
+    rdfs:label "has town" .
+
+vf:hasType a owl:ObjectProperty ;
+    rdfs:label "has type" .
+
+vf:hasWardname a owl:ObjectProperty ;
+    rdfs:label "has wardname" .
+
+vf:type a owl:ObjectProperty ;
+    rdfs:label "type" .
+
+vf:x a owl:ObjectProperty ;
+    rdfs:label "x" .
+
+vf:y a owl:ObjectProperty ;
+    rdfs:label "y" .
+
+<http://londonhousing.linkeddata.es/house/ontology#-0.378496> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#1> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#165-169TheBroadway> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#206464> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#379> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#51.5074997> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#81657> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#AyeshaSiddiaGirlSchool> a owl:Class ;
+    rdfs:label "Ayesha Siddia Girl School" .
+
+<http://londonhousing.linkeddata.es/house/ontology#Girls> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#Notapplicable> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#OtherIndependentSchool> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#SouthallBroadway> a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#open> a owl:NamedIndividual .
+
+hv:House a owl:NamedIndividual .
+
+vf:School a owl:NamedIndividual .
+
+<http://londonhousing.linkeddata.es/house/ontology#Southall> a owl:NamedIndividual .
+
