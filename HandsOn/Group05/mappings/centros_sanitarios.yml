@@ -3,8 +3,8 @@ prefixes:
   rml: "http://semweb.mmlab.be/ns/rml#"
   ql: "http://semweb.mmlab.be/ns/rml#ql#"
   xsd: "http://www.w3.org/2001/XMLSchema#"
-  clpr: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties#"
-  is: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#"
+  clpr: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties/"
+  is: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/"
   rdfs: "http://www.w3.org/2000/01/rdf-schema#"
 
 mappings:
@@ -13,7 +13,7 @@ mappings:
       source: "centros_sanitarios-updated-updated.csv"
       referenceFormulation: ql:CSV
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#centro_{centro_nro_registro}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/centro_{centro_nro_registro}"
       class: clpr:CentrodeSalud
     predicateObjectMaps:
       - predicate: clpr:idCentro
@@ -24,37 +24,37 @@ mappings:
           reference: "centro_tipo"
       - predicate: clpr:localizadoEn
         objectMap:
-          template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{direccion_completa}"
+          template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{direccion_completa}"
       - predicate: clpr:especializadoEn
         objectMaps:
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{alergologia}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cardiologia}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cirugia_mayor_ambulatoria}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cirugia_menor_ambulatoria}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{dermatologia}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{endocrinologia}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{enfermeria}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{farmacia}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{fisioterapia}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{medicina_general}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{neumologia}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{neurologia}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{nutricion_y_dietetica}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{oncologia}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{otorrinolaringologia}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{pediatria}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{psicologia_clinica}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{psiquiatria}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{rehabilitacion}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{urgencias}"
-          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{vacunacion}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{alergologia}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cardiologia}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cirugia_mayor_ambulatoria}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cirugia_menor_ambulatoria}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{dermatologia}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{endocrinologia}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{enfermeria}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{farmacia}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{fisioterapia}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{medicina_general}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{neumologia}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{neurologia}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{nutricion_y_dietetica}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{oncologia}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{otorrinolaringologia}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{pediatria}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{psicologia_clinica}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{psiquiatria}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{rehabilitacion}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{urgencias}"
+          - template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{vacunacion}"
 
   DireccionesMapping:
     logicalSource:
       source: "centros_sanitarios-updated-updated.csv"
       referenceFormulation: ql:CSV
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{direccion_completa}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{direccion_completa}"
       class: clpr:Direccion
     predicateObjectMaps:
       - predicate: rdfs:label
@@ -85,14 +85,14 @@ mappings:
           datatype: xsd:integer
       - predicate: clpr:perteneceA
         objectMap:
-          template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{municipio_nombre}"
+          template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{municipio_nombre}"
 
   MunicipiosMapping:
     logicalSource:
       source: "centros_sanitarios-updated-updated.csv"
       referenceFormulation: ql:CSV
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{municipio_nombre}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{municipio_nombre}"
       class: clpr:Municipio
     predicateObjectMaps:
       - predicate: rdfs:label
@@ -105,7 +105,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{alergologia}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{alergologia}"
       class: "clpr:Alergologia"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -120,7 +120,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cardiologia}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cardiologia}"
       class: "clpr:Cardiologia"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -135,7 +135,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cirugia_mayor_ambulatoria}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cirugia_mayor_ambulatoria}"
       class: "clpr:CirugiaMayorAmbulatoria"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -150,7 +150,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cirugia_menor_ambulatoria}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cirugia_menor_ambulatoria}"
       class: "clpr:CirugiaMenorAmbulatoria"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -165,7 +165,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{dermatologia}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{dermatologia}"
       class: "clpr:Dermatologia"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -180,7 +180,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{endocrinologia}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{endocrinologia}"
       class: "clpr:Endocrinologia"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -195,7 +195,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{enfermeria}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{enfermeria}"
       class: "clpr:Enfermeria"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -210,7 +210,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{farmacia}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{farmacia}"
       class: "clpr:Farmacia"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -225,7 +225,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{fisioterapia}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{fisioterapia}"
       class: "clpr:Fisioterapia"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -240,7 +240,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{medicina_general}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{medicina_general}"
       class: "clpr:MedicinaGeneral"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -255,7 +255,7 @@ mappings:
       referenceFormulation: "CSV"
       iterator: "$"
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{neumologia}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{neumologia}"
       class: "clpr:Neumologia"
     predicateObjectMap:
       - predicate: "rdfs:label"
@@ -270,7 +270,7 @@ NeurologiaMapping:
     referenceFormulation: "CSV"
     iterator: "$"
   subjectMap:
-    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{neurologia}"
+    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{neurologia}"
     class: "clpr:Neurologia"
   predicateObjectMap:
     predicate: "rdfs:label"
@@ -285,7 +285,7 @@ NutricionYDieteticaMapping:
     referenceFormulation: "CSV"
     iterator: "$"
   subjectMap:
-    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{nutricion_y_dietetica}"
+    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{nutricion_y_dietetica}"
     class: "clpr:NutricionYDietetica"
   predicateObjectMap:
     predicate: "rdfs:label"
@@ -300,7 +300,7 @@ OncologiaMapping:
     referenceFormulation: "CSV"
     iterator: "$"
   subjectMap:
-    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{oncologia}"
+    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{oncologia}"
     class: "clpr:Oncologia"
   predicateObjectMap:
     predicate: "rdfs:label"
@@ -315,7 +315,7 @@ OtorrinolaringologiaMapping:
     referenceFormulation: "CSV"
     iterator: "$"
   subjectMap:
-    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{otorrinolaringologia}"
+    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{otorrinolaringologia}"
     class: "clpr:Otorrinolaringologia"
   predicateObjectMap:
     predicate: "rdfs:label"
@@ -330,7 +330,7 @@ PediatriaMapping:
     referenceFormulation: "CSV"
     iterator: "$"
   subjectMap:
-    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{pediatria}"
+    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{pediatria}"
     class: "clpr:Pediatria"
   predicateObjectMap:
     predicate: "rdfs:label"
@@ -345,7 +345,7 @@ PsicologiaClinicaMapping:
     referenceFormulation: "CSV"
     iterator: "$"
   subjectMap:
-    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{psicologia_clinica}"
+    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{psicologia_clinica}"
     class: "clpr:PsicologiaClinica"
   predicateObjectMap:
     predicate: "rdfs:label"
@@ -360,7 +360,7 @@ PsiquiatriaMapping:
     referenceFormulation: "CSV"
     iterator: "$"
   subjectMap:
-    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{psiquiatria}"
+    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{psiquiatria}"
     class: "clpr:Psiquiatria"
   predicateObjectMap:
     predicate: "rdfs:label"
@@ -375,7 +375,7 @@ RehabilitacionMapping:
     referenceFormulation: "CSV"
     iterator: "$"
   subjectMap:
-    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{rehabilitacion}"
+    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{rehabilitacion}"
     class: "clpr:Rehabilitacion"
   predicateObjectMap:
     predicate: "rdfs:label"
@@ -390,7 +390,7 @@ UrgenciasMapping:
     referenceFormulation: "CSV"
     iterator: "$"
   subjectMap:
-    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{urgencias}"
+    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{urgencias}"
     class: "clpr:Urgencias"
   predicateObjectMap:
     predicate: "rdfs:label"
@@ -405,7 +405,7 @@ VacunacionMapping:
     referenceFormulation: "CSV"
     iterator: "$"
   subjectMap:
-    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{vacunacion}"
+    template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{vacunacion}"
     class: "clpr:Vacunacion"
   predicateObjectMap:
     predicate: "rdfs:label"

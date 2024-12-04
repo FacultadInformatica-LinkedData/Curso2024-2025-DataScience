@@ -2,8 +2,8 @@
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
 @prefix ql: <http://semweb.mmlab.be/ns/rml#ql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix clpr: <http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties#> .
-@prefix is: <http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#> .
+@prefix clpr: <http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties/> .
+@prefix is: <http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <#DesfibriladoresMapping>
@@ -12,7 +12,7 @@
         rml:referenceFormulation ql:CSV
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#desfibrilador_{codigo_dea}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/desfibrilador_{codigo_dea}";
         rr:class clpr:Desfibrilador
     ];
     rr:predicateObjectMap [
@@ -22,7 +22,7 @@
     rr:predicateObjectMap [
         rr:predicate clpr:albergadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#establecimiento_{codigo_dea}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/establecimiento_{codigo_dea}"
         ]
     ].
 
@@ -32,7 +32,7 @@
         rml:referenceFormulation ql:CSV
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#establecimiento_{codigo_dea}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/establecimiento_{codigo_dea}";
         rr:class clpr:Establecimiento
     ];
     rr:predicateObjectMap [
@@ -50,7 +50,7 @@
         rml:referenceFormulation ql:CSV
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{direccion_completa}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{direccion_completa}";
         rr:class clpr:Direccion
     ];
     rr:predicateObjectMap [
@@ -99,7 +99,7 @@
     rr:predicateObjectMap [
         rr:predicate clpr:perteneceA;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{municipio_nombre}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{municipio_nombre}"
         ]
     ].
 
@@ -109,7 +109,7 @@
         rml:referenceFormulation ql:CSV
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{municipio_nombre}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{municipio_nombre}";
         rr:class clpr:Municipio
     ];
     rr:predicateObjectMap [

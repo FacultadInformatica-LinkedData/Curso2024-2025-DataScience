@@ -2,8 +2,8 @@
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
 @prefix ql: <http://semweb.mmlab.be/ns/rml#ql#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix clpr: <http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties#> .
-@prefix is: <http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#> .
+@prefix clpr: <http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties/> .
+@prefix is: <http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 <#CentrosSanitariosMapping>
@@ -12,7 +12,7 @@
         rml:referenceFormulation ql:CSV
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#centro_{centro_nro_registro}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/centro_{centro_nro_registro}";
         rr:class clpr:CentrodeSalud
     ];
     rr:predicateObjectMap [
@@ -26,7 +26,7 @@
     rr:predicateObjectMap [
         rr:predicate clpr:localizadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{direccion_completa}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{direccion_completa}"
         ]
     ];
 
@@ -34,127 +34,127 @@
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{alergologia}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{alergologia}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cardiologia}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cardiologia}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cirugia_mayor_ambulatoria}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cirugia_mayor_ambulatoria}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cirugia_menor_ambulatoria}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cirugia_menor_ambulatoria}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{dermatologia}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{dermatologia}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{endocrinologia}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{endocrinologia}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{enfermeria}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{enfermeria}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{farmacia}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{farmacia}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{fisioterapia}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{fisioterapia}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{medicina_general}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{medicina_general}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{neumologia}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{neumologia}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{neurologia}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{neurologia}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{nutricion_y_dietetica}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{nutricion_y_dietetica}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{oncologia}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{oncologia}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{otorrinolaringologia}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{otorrinolaringologia}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{pediatria}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{pediatria}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{psicologia_clinica}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{psicologia_clinica}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{psiquiatria}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{psiquiatria}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{rehabilitacion}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{rehabilitacion}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{urgencias}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{urgencias}"
         ]
     ];
     rr:predicateObjectMap [
         rr:predicate clpr:especializadoEn;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{vacunacion}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{vacunacion}"
         ]
     ].
     
@@ -164,7 +164,7 @@
         rml:referenceFormulation ql:CSV
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{direccion_completa}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{direccion_completa}";
         rr:class clpr:Direccion
     ];
     rr:predicateObjectMap [
@@ -211,7 +211,7 @@
     rr:predicateObjectMap [
         rr:predicate clpr:perteneceA;
         rr:objectMap [
-            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{municipio_nombre}"
+            rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{municipio_nombre}"
         ]
     ].
 
@@ -221,7 +221,7 @@
         rml:referenceFormulation ql:CSV
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{municipio_nombre}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{municipio_nombre}";
         rr:class clpr:Municipio
     ];
     rr:predicateObjectMap [
@@ -237,7 +237,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{alergologia}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{alergologia}";
         rr:class clpr:Alergologia
     ];
     rr:predicateObjectMap [
@@ -254,7 +254,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cardiologia}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cardiologia}";
         rr:class clpr:Cardiologia
     ];
     rr:predicateObjectMap [
@@ -271,7 +271,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cirugia_mayor_ambulatoria}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cirugia_mayor_ambulatoria}";
         rr:class clpr:CirugiaMayorAmbulatoria
     ];
     rr:predicateObjectMap [
@@ -288,7 +288,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{cirugia_menor_ambulatoria}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{cirugia_menor_ambulatoria}";
         rr:class clpr:CirugiaMenorAmbulatoria
     ];
     rr:predicateObjectMap [
@@ -305,7 +305,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{dermatologia}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{dermatologia}";
         rr:class clpr:Dermatologia
     ];
     rr:predicateObjectMap [
@@ -322,7 +322,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{endocrinologia}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{endocrinologia}";
         rr:class clpr:Endocrinologia
     ];
     rr:predicateObjectMap [
@@ -339,7 +339,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{enfermeria}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{enfermeria}";
         rr:class clpr:Enfermeria
     ];
     rr:predicateObjectMap [
@@ -356,7 +356,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{farmacia}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{farmacia}";
         rr:class clpr:Farmacia
     ];
     rr:predicateObjectMap [
@@ -373,7 +373,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{fisioterapia}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{fisioterapia}";
         rr:class clpr:Fisioterapia
     ];
     rr:predicateObjectMap [
@@ -390,7 +390,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{medicina_general}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{medicina_general}";
         rr:class clpr:MedicinaGeneral
     ];
     rr:predicateObjectMap [
@@ -407,7 +407,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{neumologia}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{neumologia}";
         rr:class clpr:Neumologia
     ];
     rr:predicateObjectMap [
@@ -424,7 +424,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{neurologia}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{neurologia}";
         rr:class clpr:Neurologia
     ];
     rr:predicateObjectMap [
@@ -441,7 +441,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{nutricion_y_dietetica}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{nutricion_y_dietetica}";
         rr:class clpr:NutricionYDietetica
     ];
     rr:predicateObjectMap [
@@ -458,7 +458,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{oncologia}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{oncologia}";
         rr:class clpr:Oncologia
     ];
     rr:predicateObjectMap [
@@ -475,7 +475,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{otorrinolaringologia}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{otorrinolaringologia}";
         rr:class clpr:Otorrinolaringologia
     ];
     rr:predicateObjectMap [
@@ -492,7 +492,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{pediatria}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{pediatria}";
         rr:class clpr:Pediatria
     ];
     rr:predicateObjectMap [
@@ -509,7 +509,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{psicologia_clinica}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{psicologia_clinica}";
         rr:class clpr:PsicologiaClinica
     ];
     rr:predicateObjectMap [
@@ -526,7 +526,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{psiquiatria}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{psiquiatria}";
         rr:class clpr:Psiquiatria
     ];
     rr:predicateObjectMap [
@@ -543,7 +543,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{rehabilitacion}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{rehabilitacion}";
         rr:class clpr:Rehabilitacion
     ];
     rr:predicateObjectMap [
@@ -560,7 +560,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{urgencias}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{urgencias}";
         rr:class clpr:Urgencias
     ];
     rr:predicateObjectMap [
@@ -577,7 +577,7 @@
         rml:iterator "$";
     ];
     rr:subjectMap [
-        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{vacunacion}";
+        rr:template "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{vacunacion}";
         rr:class clpr:Vacunacion
     ];
     rr:predicateObjectMap [
