@@ -9,98 +9,107 @@ prefixes:
   rml: http://semweb.mmlab.be/ns/rml#
   ql: http://semweb.mmlab.be/ns/ql#
   rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
-  tm: http://turismo.mad.es/cultural/resource/
+  tm-ont: http://turismo.mad.es/cultural/ontology/ont1#
+  tm: http://turismo.mad.es/cultural/resource/ 
+  tm-eve: http://turismo.mad.es/cultural/resource/Event/  
+  tm-act: http://turismo.mad.es/cultural/resource/Activity/  
+  tm-ins: http://turismo.mad.es/cultural/resource/Installation/ 
+  tm-add: http://turismo.mad.es/cultural/resource/Address/ 
+  tm-dis: http://turismo.mad.es/cultural/resource/District/
+  tm-nei: http://turismo.mad.es/cultural/resource/Neighborhood/
+  tm-str: http://turismo.mad.es/cultural/resource/Street/ 
+ 
 
  
 mappings:
   event:
     sources:
       - ['events_data-with-links.csv~csv']
-    s: tm:$(TITULO)
+    s: tm-eve:$(TITULO)
     po:
-      - [a, tm:Event]
-      - [tm:hasEventId,$(ID-EVENTO),xsd:integer]
-      - [tm:hasTitle,$(TITULO),xsd:string]
-      - [tm:hasPrice,$(PRECIO),xsd:string]
-      - [tm:hasFreeAdmission,$(GRATUITO),xsd:integer]
-      - [tm:isLongDuration,$(LARGA-DURACION),xsd:integer]
-      - [tm:hasDaysOfOccurrence,$(DIAS-SEMANA),xsd:string]
-      - [tm:hasStartDate,$(FECHA),xsd:dateTime]
-      - [tm:hasEndDate,$(FECHA-FIN),xsd:dateTime]
-      - [tm:hasStartTime,$(HORA),xsd:time]
-      - [tm:hasDescription,$(DESCRIPCION),xsd:string]
-      - [tm:hasUrl,$(CONTENT-URL),xsd:anyURI]
-      - [tm:hasOrganismType,$(TIPO),xsd:anyURI]
-      - [tm:hasActivity, tm:$(TITULO)~iri]
+      - [a, tm-ont:Event]
+      - [tm-ont:hasEventId,$(ID-EVENTO),xsd:integer]
+      - [tm-ont:hasTitle,$(TITULO),xsd:string]
+      - [tm-ont:hasPrice,$(PRECIO),xsd:string]
+      - [tm-ont:hasFreeAdmission,$(GRATUITO),xsd:integer]
+      - [tm-ont:isLongDuration,$(LARGA-DURACION),xsd:integer]
+      - [tm-ont:hasDaysOfOccurrence,$(DIAS-SEMANA),xsd:string]
+      - [tm-ont:hasStartDate,$(FECHA),xsd:dateTime]
+      - [tm-ont:hasEndDate,$(FECHA-FIN),xsd:dateTime]
+      - [tm-ont:hasStartTime,$(HORA),xsd:time]
+      - [tm-ont:hasDescription,$(DESCRIPCION),xsd:string]
+      - [tm-ont:hasUrl,$(CONTENT-URL),xsd:anyURI]
+      - [tm-ont:hasOrganismType,$(TIPO),xsd:anyURI]
+      - [tm-ont:hasActivity, tm-act:$(TITULO)~iri]
 
 
   activity:
     sources:
       - ['events_data-with-links.csv~csv']
-    s: tm:$(TITULO)
+    s: tm-act:$(TITULO)
     po:
-      - [a, tm:Activity]
-      - [tm:tm:hasTitle,$(TITULO-ACTIVIDAD),xsd:string]
-      - [tm:tm:hasUrl,$(URL-ACTIVIDAD),xsd:anyURI]
-      - [tm:tm:hasAudience,$(AUDIENCIA),xsd:string]
-      - [tm:takesPlaceAtInstallation, tm:$(NOMBRE-INSTALACION)~iri]
+      - [a, tm-ont:Activity]
+      - [tm-ont:hasTitle,$(TITULO-ACTIVIDAD),xsd:string]
+      - [tm-ont:hasUrl,$(URL-ACTIVIDAD),xsd:anyURI]
+      - [tm-ont:hasAudience,$(AUDIENCIA),xsd:string]
+      - [tm-ont:takesPlaceAtInstallation, tm-ins:$(NOMBRE-INSTALACION)~iri]
 
 
   installation:
     sources:
       - ['events_data-with-links.csv~csv']
-    s: tm:$(NOMBRE-INSTALACION)
+    s: tm-ins:$(NOMBRE-INSTALACION)
     po:
-      - [a, tm:Installation]
-      - [tm:tm:hasName,$(NOMBRE-INSTALACION),xsd:string]
-      - [tm:tm:hasAccesibility,$(ACCESIBILIDAD-INSTALACION),xsd:string]
-      - [tm:tm:hasUrl,$(URL-INSTALACION),xsd:anyURI]
-      - [tm:hasAddress, tm:$(ID)~iri]
+      - [a, tm-ont:Installation]
+      - [tm-ont:hasName,$(NOMBRE-INSTALACION),xsd:string]
+      - [tm-ont:hasAccesibility,$(ACCESIBILIDAD-INSTALACION),xsd:string]
+      - [tm-ont:hasUrl,$(URL-INSTALACION),xsd:anyURI]
+      - [tm-ont:hasAddress, tm-add:$(ID)~iri]
 
 
   address:
     sources:
       - ['events_data-with-links.csv~csv']
-    s: tm:$(ID)
+    s: tm-add:$(ID)
     po:
-      - [a, tm:Address]
-      - [tm:hasNumberType,$(NUM-INSTALACION),xsd:integer]
-      - [tm:hasPostalCode,$(CODIGO-POSTAL-INSTALACION),xsd:integer]
-      - [tm:hasCoordX,$(COORDENADA-X),xsd:integer]
-      - [tm:hasCoordY,$(COORDENADA-Y),xsd:integer]
-      - [tm:hasLongitude,$(LONGITUD),xsd:decimal]
-      - [tm:hasLatitude,$(LATITUD),xsd:decimal]
-      - [tm:hasStreet, tm:$(NOMBRE-VIA-INSTALACION)~iri]
-      - [tm:hasNeighborhood, tm:$(BARRIO-INSTALACION)~iri]
-      - [tm:hasDistrict, tm:$(DISTRITO-INSTALACION)~iri]
+      - [a, tm-ont:Address]
+      - [tm-ont:hasNumberType,$(NUM-INSTALACION),xsd:integer]
+      - [tm-ont:hasPostalCode,$(CODIGO-POSTAL-INSTALACION),xsd:integer]
+      - [tm-ont:hasCoordX,$(COORDENADA-X),xsd:integer]
+      - [tm-ont:hasCoordY,$(COORDENADA-Y),xsd:integer]
+      - [tm-ont:hasLongitude,$(LONGITUD),xsd:decimal]
+      - [tm-ont:hasLatitude,$(LATITUD),xsd:decimal]
+      - [tm-ont:hasStreet, tm-str:$(NOMBRE-VIA-INSTALACION)~iri]
+      - [tm-ont:hasNeighborhood, tm-nei:$(BARRIO-INSTALACION)~iri]
+      - [tm-ont:hasDistrict, tm-dis:$(DISTRITO-INSTALACION)~iri]
 
 
   street:
     sources:
       - ['events_data-with-links.csv~csv']
-    s: tm:$(NOMBRE-VIA-INSTALACION)
+    s: tm-str:$(NOMBRE-VIA-INSTALACION)
     po:
-      - [a, tm:Street]
-      - [tm:hasStreetName,$(NOMBRE-VIA-INSTALACION),xsd:string]
-      - [tm:hasStreetType,$(CLASE-VIAL-INSTALACION),xsd:string]
+      - [a, tm-ont:Street]
+      - [tm-ont:hasStreetName,$(NOMBRE-VIA-INSTALACION),xsd:string]
+      - [tm-ont:hasStreetType,$(CLASE-VIAL-INSTALACION),xsd:string]
 
 
   neighborhood:
     sources:
       - ['events_data-with-links.csv~csv']
-    s: tm:$(BARRIO-INSTALACION)
+    s: tm-nei:$(BARRIO-INSTALACION)
     po:
-      - [a, tm:Neighborhood]      
-      - [tm:hasNeighborhoodName,$(BARRIO-INSTALACION),xsd:string] 
+      - [a, tm-ont:Neighborhood]      
+      - [tm-ont:hasNeighborhoodName,$(BARRIO-INSTALACION),xsd:string] 
       - [owl:sameAs, $(BARRIO-INSTALACION_RECON)~iri]
-
+       
 
   district:
     sources:
       - ['events_data-with-links.csv~csv']
-    s: tm:$(DISTRITO-INSTALACION)
+    s: tm-dis:$(DISTRITO-INSTALACION)
     po:
-      - [a, tm:District]
-      - [tm:tm:hasDistrictCode,$(BARRIO-INSTALACION),xsd:string]
-      - [tm:tm:hasDistrictName,$(DISTRITO-INSTALACION),xsd:string]
+      - [a, tm-ont:District]
+      - [tm-ont:hasDistrictCode,$(BARRIO-INSTALACION),xsd:string]
+      - [tm-ont:hasDistrictName,$(DISTRITO-INSTALACION),xsd:string]
       - [owl:sameAs, $(DISTRITO-INSTALACION_RECON)~iri]

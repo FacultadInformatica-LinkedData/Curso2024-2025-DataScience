@@ -13,7 +13,12 @@
 @prefix v: <http://rdf.data-vocabulary.org/#> .
 @prefix schema: <http://schema.org/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix tm-ont: <http://turismo.mad.es/cultural/ontology/ont1#> .
 @prefix tm: <http://turismo.mad.es/cultural/resource/> .
+@prefix tm-lig: <http://turismo.mad.es/cultural/resource/Lighting/> .
+@prefix tm-dis: <http://turismo.mad.es/cultural/resource/District/> .
+@prefix tm-nei: <http://turismo.mad.es/cultural/resource/Neighborhood/> .
+@prefix tm-str: <http://turismo.mad.es/cultural/resource/Street/> .
 
 map:map_district_000 rml:logicalSource map:source_003 ;
 	rdf:type rr:TriplesMap ;
@@ -40,7 +45,7 @@ map:map_street_000 rml:logicalSource map:source_001 ;
 	rr:subjectMap map:s_001 .
 
 map:om_000 rdf:type rr:ObjectMap ;
-	rr:constant tm:Lighting ;
+	rr:constant tm-ont:Lighting ;
 	rr:termType rr:IRI .
 
 map:om_001 rml:reference "MOTIVO" ;
@@ -94,19 +99,19 @@ map:om_010 rml:reference "TEXTO" ;
 	rr:termType rr:Literal .
 
 map:om_011 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{POSICION}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/Street/{POSICION}" ;
 	rr:termType rr:IRI .
 
 map:om_012 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{BARRIO}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/Neighborhood/{BARRIO}" ;
 	rr:termType rr:IRI .
 
 map:om_013 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{DISTRITOS}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/District/{DISTRITOS}" ;
 	rr:termType rr:IRI .
 
 map:om_014 rdf:type rr:ObjectMap ;
-	rr:constant tm:Street ;
+	rr:constant tm-ont:Street ;
 	rr:termType rr:IRI .
 
 map:om_015 rml:reference "POSICION" ;
@@ -115,7 +120,7 @@ map:om_015 rml:reference "POSICION" ;
 	rr:termType rr:Literal .
 
 map:om_016 rdf:type rr:ObjectMap ;
-	rr:constant tm:Neighborhood ;
+	rr:constant tm-ont:Neighborhood ;
 	rr:termType rr:IRI .
 
 map:om_017 rml:reference "BARRIO" ;
@@ -128,7 +133,7 @@ map:om_018 rml:reference "BARRIO_RECON" ;
 	rr:termType rr:IRI .
 
 map:om_019 rdf:type rr:ObjectMap ;
-	rr:constant tm:District ;
+	rr:constant tm-ont:District ;
 	rr:termType rr:IRI .
 
 map:om_020 rml:reference "DISTRITOS" ;
@@ -144,55 +149,55 @@ map:pm_000 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_001 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasMotive .
+	rr:constant tm-ont:hasMotive .
 
 map:pm_002 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasElementId .
+	rr:constant tm-ont:hasElementId .
 
 map:pm_003 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasComment .
+	rr:constant tm-ont:hasComment .
 
 map:pm_004 rdf:type rr:PredicateMap ;
-	rr:constant tm:isNew .
+	rr:constant tm-ont:isNew .
 
 map:pm_005 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasType .
+	rr:constant tm-ont:hasType .
 
 map:pm_006 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasLength .
+	rr:constant tm-ont:hasLength .
 
 map:pm_007 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasNumberOfElements .
+	rr:constant tm-ont:hasNumberOfElements .
 
 map:pm_008 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasDesigner .
+	rr:constant tm-ont:hasDesigner .
 
 map:pm_009 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasPromoter .
+	rr:constant tm-ont:hasPromoter .
 
 map:pm_010 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasText .
+	rr:constant tm-ont:hasText .
 
 map:pm_011 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStreet .
+	rr:constant tm-ont:hasStreet .
 
 map:pm_012 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasNeighborhood .
+	rr:constant tm-ont:hasNeighborhood .
 
 map:pm_013 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasDistrict .
+	rr:constant tm-ont:hasDistrict .
 
 map:pm_014 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_015 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStreetName .
+	rr:constant tm-ont:hasStreetName .
 
 map:pm_016 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_017 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasNeighborhoodName .
+	rr:constant tm-ont:hasNeighborhoodName .
 
 map:pm_018 rdf:type rr:PredicateMap ;
 	rr:constant owl:sameAs .
@@ -201,7 +206,7 @@ map:pm_019 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_020 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasDistrictName .
 
 map:pm_021 rdf:type rr:PredicateMap ;
 	rr:constant owl:sameAs .
@@ -298,16 +303,16 @@ map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_district_000, ma
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
 map:s_000 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{ID}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Lighting/{ID}" .
 
 map:s_001 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{POSICION}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Street/{POSICION}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{BARRIO}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Neighborhood/{BARRIO}" .
 
 map:s_003 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{DISTRITOS}" .
+	rr:template "http://turismo.mad.es/cultural/resource/District/{DISTRITOS}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
 	rml:source "lighting_data-with-links.csv" ;

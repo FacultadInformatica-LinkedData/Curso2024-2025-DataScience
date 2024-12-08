@@ -13,7 +13,13 @@
 @prefix v: <http://rdf.data-vocabulary.org/#> .
 @prefix schema: <http://schema.org/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix tm-ont: <http://turismo.mad.es/cultural/ontology/ont1#> .
 @prefix tm: <http://turismo.mad.es/cultural/resource/> .
+@prefix tm-mon: <http://turismo.mad.es/cultural/resource/Monument/> .
+@prefix tm-add: <http://turismo.mad.es/cultural/resource/Address/> .
+@prefix tm-dis: <http://turismo.mad.es/cultural/resource/District/> .
+@prefix tm-nei: <http://turismo.mad.es/cultural/resource/Neighborhood/> .
+@prefix tm-str: <http://turismo.mad.es/cultural/resource/Street/> .
 
 map:map_address_000 rml:logicalSource map:source_001 ;
 	rdf:type rr:TriplesMap ;
@@ -46,7 +52,7 @@ map:map_street_000 rml:logicalSource map:source_002 ;
 	rr:subjectMap map:s_002 .
 
 map:om_000 rdf:type rr:ObjectMap ;
-	rr:constant tm:Monument ;
+	rr:constant tm-ont:Monument ;
 	rr:termType rr:IRI .
 
 map:om_001 rml:reference "PK" ;
@@ -90,7 +96,7 @@ map:om_008 rml:reference "CONTENT-URL" ;
 	rr:termType rr:Literal .
 
 map:om_009 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{ID}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/Address/{ID}" ;
 	rr:termType rr:IRI .
 
 map:om_010 rml:reference "NOMBRE_RECON" ;
@@ -98,7 +104,7 @@ map:om_010 rml:reference "NOMBRE_RECON" ;
 	rr:termType rr:IRI .
 
 map:om_011 rdf:type rr:ObjectMap ;
-	rr:constant tm:Address ;
+	rr:constant tm-ont:Address ;
 	rr:termType rr:IRI .
 
 map:om_012 rml:reference "TIPO-NUM" ;
@@ -147,19 +153,19 @@ map:om_020 rml:reference "LATITUD" ;
 	rr:termType rr:Literal .
 
 map:om_021 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{NOMBRE-VIA}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/Street/{NOMBRE-VIA}" ;
 	rr:termType rr:IRI .
 
 map:om_022 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{BARRIO}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/Neighborhood/{BARRIO}" ;
 	rr:termType rr:IRI .
 
 map:om_023 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{DISTRITO}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/District/{DISTRITO}" ;
 	rr:termType rr:IRI .
 
 map:om_024 rdf:type rr:ObjectMap ;
-	rr:constant tm:Street ;
+	rr:constant tm-ont:Street ;
 	rr:termType rr:IRI .
 
 map:om_025 rml:reference "NOMBRE-VIA" ;
@@ -212,31 +218,31 @@ map:pm_000 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_001 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasId .
+	rr:constant tm-ont:hasId .
 
 map:pm_002 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasName .
+	rr:constant tm-ont:hasName .
 
 map:pm_003 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasSubtype .
+	rr:constant tm-ont:hasSubtype .
 
 map:pm_004 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasDescription .
+	rr:constant tm-ont:hasDescription .
 
 map:pm_005 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasConstructionDate .
+	rr:constant tm-ont:hasConstructionDate .
 
 map:pm_006 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasAuthor .
+	rr:constant tm-ont:hasAuthor .
 
 map:pm_007 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasPdf .
+	rr:constant tm-ont:hasPdf .
 
 map:pm_008 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasUrl .
+	rr:constant tm-ont:hasUrl .
 
 map:pm_009 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasAddress .
+	rr:constant tm-ont:hasAddress .
 
 map:pm_010 rdf:type rr:PredicateMap ;
 	rr:constant owl:sameAs .
@@ -245,58 +251,58 @@ map:pm_011 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_012 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasNumberType .
+	rr:constant <tm-ont-:hasNumberType> .
 
 map:pm_013 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStreetNumber .
+	rr:constant tm-ont:hasStreetNumber .
 
 map:pm_014 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasLocality .
+	rr:constant <tm-ont-:hasLocality> .
 
 map:pm_015 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasProvince .
+	rr:constant <tm-ont-:hasProvince> .
 
 map:pm_016 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasPostalCode .
+	rr:constant tm-ont:hasPostalCode .
 
 map:pm_017 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasCoordX .
+	rr:constant tm-ont:hasCoordX .
 
 map:pm_018 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasCoordY .
+	rr:constant tm-ont:hasCoordY .
 
 map:pm_019 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasLongitude .
+	rr:constant tm-ont:hasLongitude .
 
 map:pm_020 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasLatitude .
+	rr:constant tm-ont:hasLatitude .
 
 map:pm_021 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStreet .
+	rr:constant tm-ont:hasStreet .
 
 map:pm_022 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasNeighborhood .
+	rr:constant tm-ont:hasNeighborhood .
 
 map:pm_023 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasDistrict .
+	rr:constant tm-ont:hasDistrict .
 
 map:pm_024 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_025 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStreetName .
+	rr:constant tm-ont:hasStreetName .
 
 map:pm_026 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStreetType .
+	rr:constant tm-ont:hasStreetType .
 
 map:pm_027 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_028 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasNeighborhoodCode .
+	rr:constant tm-ont:hasNeighborhoodCode .
 
 map:pm_029 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasNeighborhoodName .
+	rr:constant tm-ont:hasNeighborhoodName .
 
 map:pm_030 rdf:type rr:PredicateMap ;
 	rr:constant owl:sameAs .
@@ -305,10 +311,10 @@ map:pm_031 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_032 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasDistrictCode .
 
 map:pm_033 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasDistrictName .
 
 map:pm_034 rdf:type rr:PredicateMap ;
 	rr:constant owl:sameAs .
@@ -457,19 +463,19 @@ map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_address_000, map
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
 map:s_000 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{NOMBRE}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Monument/{NOMBRE}" .
 
 map:s_001 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{ID}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Address/{ID}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{NOMBRE-VIA}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Street/{NOMBRE-VIA}" .
 
 map:s_003 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{BARRIO}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Neighborhood/{BARRIO}" .
 
 map:s_004 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{DISTRITO}" .
+	rr:template "http://turismo.mad.es/cultural/resource/District/{DISTRITO}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
 	rml:source "monument_data-with-links.csv" ;

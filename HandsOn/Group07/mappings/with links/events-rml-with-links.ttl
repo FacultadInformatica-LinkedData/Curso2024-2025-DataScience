@@ -13,7 +13,15 @@
 @prefix v: <http://rdf.data-vocabulary.org/#> .
 @prefix schema: <http://schema.org/> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix tm-ont: <http://turismo.mad.es/cultural/ontology/ont1#> .
 @prefix tm: <http://turismo.mad.es/cultural/resource/> .
+@prefix tm-eve: <http://turismo.mad.es/cultural/resource/Event/> .
+@prefix tm-act: <http://turismo.mad.es/cultural/resource/Activity/> .
+@prefix tm-ins: <http://turismo.mad.es/cultural/resource/Installation/> .
+@prefix tm-add: <http://turismo.mad.es/cultural/resource/Address/> .
+@prefix tm-dis: <http://turismo.mad.es/cultural/resource/District/> .
+@prefix tm-nei: <http://turismo.mad.es/cultural/resource/Neighborhood/> .
+@prefix tm-str: <http://turismo.mad.es/cultural/resource/Street/> .
 
 map:map_activity_000 rml:logicalSource map:source_001 ;
 	rdf:type rr:TriplesMap ;
@@ -58,7 +66,7 @@ map:map_street_000 rml:logicalSource map:source_004 ;
 	rr:subjectMap map:s_004 .
 
 map:om_000 rdf:type rr:ObjectMap ;
-	rr:constant tm:Event ;
+	rr:constant tm-ont:Event ;
 	rr:termType rr:IRI .
 
 map:om_001 rml:reference "ID-EVENTO" ;
@@ -122,11 +130,11 @@ map:om_012 rml:reference "TIPO" ;
 	rr:termType rr:Literal .
 
 map:om_013 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{TITULO}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/Activity/{TITULO}" ;
 	rr:termType rr:IRI .
 
 map:om_014 rdf:type rr:ObjectMap ;
-	rr:constant tm:Activity ;
+	rr:constant tm-ont:Activity ;
 	rr:termType rr:IRI .
 
 map:om_015 rml:reference "TITULO-ACTIVIDAD" ;
@@ -145,11 +153,11 @@ map:om_017 rml:reference "AUDIENCIA" ;
 	rr:termType rr:Literal .
 
 map:om_018 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{NOMBRE-INSTALACION}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/Installation/{NOMBRE-INSTALACION}" ;
 	rr:termType rr:IRI .
 
 map:om_019 rdf:type rr:ObjectMap ;
-	rr:constant tm:Installation ;
+	rr:constant tm-ont:Installation ;
 	rr:termType rr:IRI .
 
 map:om_020 rml:reference "NOMBRE-INSTALACION" ;
@@ -168,11 +176,11 @@ map:om_022 rml:reference "URL-INSTALACION" ;
 	rr:termType rr:Literal .
 
 map:om_023 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{ID}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/Address/{ID}" ;
 	rr:termType rr:IRI .
 
 map:om_024 rdf:type rr:ObjectMap ;
-	rr:constant tm:Address ;
+	rr:constant tm-ont:Address ;
 	rr:termType rr:IRI .
 
 map:om_025 rml:reference "NUM-INSTALACION" ;
@@ -206,19 +214,19 @@ map:om_030 rml:reference "LATITUD" ;
 	rr:termType rr:Literal .
 
 map:om_031 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{NOMBRE-VIA-INSTALACION}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/Street/{NOMBRE-VIA-INSTALACION}" ;
 	rr:termType rr:IRI .
 
 map:om_032 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{BARRIO-INSTALACION}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/Neighborhood/{BARRIO-INSTALACION}" ;
 	rr:termType rr:IRI .
 
 map:om_033 rdf:type rr:ObjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{DISTRITO-INSTALACION}" ;
+	rr:template "http://turismo.mad.es/cultural/resource/District/{DISTRITO-INSTALACION}" ;
 	rr:termType rr:IRI .
 
 map:om_034 rdf:type rr:ObjectMap ;
-	rr:constant tm:Street ;
+	rr:constant tm-ont:Street ;
 	rr:termType rr:IRI .
 
 map:om_035 rml:reference "NOMBRE-VIA-INSTALACION" ;
@@ -232,7 +240,7 @@ map:om_036 rml:reference "CLASE-VIAL-INSTALACION" ;
 	rr:termType rr:Literal .
 
 map:om_037 rdf:type rr:ObjectMap ;
-	rr:constant tm:Neighborhood ;
+	rr:constant tm-ont:Neighborhood ;
 	rr:termType rr:IRI .
 
 map:om_038 rml:reference "BARRIO-INSTALACION" ;
@@ -245,7 +253,7 @@ map:om_039 rml:reference "BARRIO-INSTALACION_RECON" ;
 	rr:termType rr:IRI .
 
 map:om_040 rdf:type rr:ObjectMap ;
-	rr:constant tm:District ;
+	rr:constant tm-ont:District ;
 	rr:termType rr:IRI .
 
 map:om_041 rml:reference "BARRIO-INSTALACION" ;
@@ -266,118 +274,118 @@ map:pm_000 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_001 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasEventId .
+	rr:constant tm-ont:hasEventId .
 
 map:pm_002 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasTitle .
+	rr:constant tm-ont:hasTitle .
 
 map:pm_003 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasPrice .
+	rr:constant tm-ont:hasPrice .
 
 map:pm_004 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasFreeAdmission .
+	rr:constant tm-ont:hasFreeAdmission .
 
 map:pm_005 rdf:type rr:PredicateMap ;
-	rr:constant tm:isLongDuration .
+	rr:constant tm-ont:isLongDuration .
 
 map:pm_006 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasDaysOfOccurrence .
+	rr:constant tm-ont:hasDaysOfOccurrence .
 
 map:pm_007 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStartDate .
+	rr:constant tm-ont:hasStartDate .
 
 map:pm_008 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasEndDate .
+	rr:constant tm-ont:hasEndDate .
 
 map:pm_009 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStartTime .
+	rr:constant tm-ont:hasStartTime .
 
 map:pm_010 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasDescription .
+	rr:constant tm-ont:hasDescription .
 
 map:pm_011 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasUrl .
+	rr:constant tm-ont:hasUrl .
 
 map:pm_012 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasOrganismType .
+	rr:constant tm-ont:hasOrganismType .
 
 map:pm_013 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasActivity .
+	rr:constant tm-ont:hasActivity .
 
 map:pm_014 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_015 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasTitle .
 
 map:pm_016 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasUrl .
 
 map:pm_017 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasAudience .
 
 map:pm_018 rdf:type rr:PredicateMap ;
-	rr:constant tm:takesPlaceAtInstallation .
+	rr:constant tm-ont:takesPlaceAtInstallation .
 
 map:pm_019 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_020 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasName .
 
 map:pm_021 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasAccesibility .
 
 map:pm_022 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasUrl .
 
 map:pm_023 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasAddress .
+	rr:constant tm-ont:hasAddress .
 
 map:pm_024 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_025 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasNumberType .
+	rr:constant tm-ont:hasNumberType .
 
 map:pm_026 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasPostalCode .
+	rr:constant tm-ont:hasPostalCode .
 
 map:pm_027 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasCoordX .
+	rr:constant tm-ont:hasCoordX .
 
 map:pm_028 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasCoordY .
+	rr:constant tm-ont:hasCoordY .
 
 map:pm_029 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasLongitude .
+	rr:constant tm-ont:hasLongitude .
 
 map:pm_030 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasLatitude .
+	rr:constant tm-ont:hasLatitude .
 
 map:pm_031 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStreet .
+	rr:constant tm-ont:hasStreet .
 
 map:pm_032 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasNeighborhood .
+	rr:constant tm-ont:hasNeighborhood .
 
 map:pm_033 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasDistrict .
+	rr:constant tm-ont:hasDistrict .
 
 map:pm_034 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_035 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStreetName .
+	rr:constant tm-ont:hasStreetName .
 
 map:pm_036 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasStreetType .
+	rr:constant tm-ont:hasStreetType .
 
 map:pm_037 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_038 rdf:type rr:PredicateMap ;
-	rr:constant tm:hasNeighborhoodName .
+	rr:constant tm-ont:hasNeighborhoodName .
 
 map:pm_039 rdf:type rr:PredicateMap ;
 	rr:constant owl:sameAs .
@@ -386,10 +394,10 @@ map:pm_040 rdf:type rr:PredicateMap ;
 	rr:constant rdf:type .
 
 map:pm_041 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasDistrictCode .
 
 map:pm_042 rdf:type rr:PredicateMap ;
-	rr:constant tm:tm .
+	rr:constant tm-ont:hasDistrictName .
 
 map:pm_043 rdf:type rr:PredicateMap ;
 	rr:constant owl:sameAs .
@@ -574,25 +582,25 @@ map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_activity_000, ma
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
 map:s_000 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{TITULO}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Event/{TITULO}" .
 
 map:s_001 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{TITULO}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Activity/{TITULO}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{NOMBRE-INSTALACION}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Installation/{NOMBRE-INSTALACION}" .
 
 map:s_003 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{ID}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Address/{ID}" .
 
 map:s_004 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{NOMBRE-VIA-INSTALACION}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Street/{NOMBRE-VIA-INSTALACION}" .
 
 map:s_005 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{BARRIO-INSTALACION}" .
+	rr:template "http://turismo.mad.es/cultural/resource/Neighborhood/{BARRIO-INSTALACION}" .
 
 map:s_006 rdf:type rr:SubjectMap ;
-	rr:template "http://turismo.mad.es/cultural/resource/{DISTRITO-INSTALACION}" .
+	rr:template "http://turismo.mad.es/cultural/resource/District/{DISTRITO-INSTALACION}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
 	rml:source "events_data-with-links.csv" ;
