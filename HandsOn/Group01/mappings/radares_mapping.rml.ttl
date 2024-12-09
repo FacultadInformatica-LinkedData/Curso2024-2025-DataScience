@@ -2,7 +2,8 @@
 @prefix rml: <http://semweb.mmlab.be/ns/rml#> .
 @prefix ql: <http://semweb.mmlab.be/ns/ql#> .
 @prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix ex: <http://example.com/ns#> .
+@prefix ont: <http://dominiowebsemantica.com/ontology/ont#> .
+@prefix res: <http://dominiowebsemantica.com/resource/> .
 
 <#RadaresMapping> a rr:TriplesMap ;
     rml:logicalSource [
@@ -10,63 +11,59 @@
         rml:referenceFormulation ql:CSV
     ];
     rr:subjectMap [
-        rr:template "http://dominiowebsemantica.com/Radar/{ID}" ;
-        rr:class ex:Radar
-    ];
-    rr:subjectMap [
-        rr:template "http://dominiowebsemantica.com/Radar/{ID}" ;
-        rr:class ex:Radar
+        rr:template "http://dominiowebsemantica.com/resource/Radar/{ID}" ;
+        rr:class ont:Radar
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:id ;
+        rr:predicate ont:id ;
         rr:objectMap [ rml:reference "ID" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:numRadar ;
+        rr:predicate ont:numRadar ;
         rr:objectMap [ rml:reference "numRadar" ; rr:datatype <http://www.w3.org/2001/XMLSchema#integer> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:ubicacion ;
+        rr:predicate ont:ubicacion ;
         rr:objectMap [ rml:reference "ubicacion" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:carretera ;
+        rr:predicate ont:carretera ;
         rr:objectMap [ rml:reference "carretera" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:ubicacionCarretera ;
+        rr:predicate ont:ubicacionCarretera ;
         rr:objectMap [ rml:reference "Ubicación carretera" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:pk ;
+        rr:predicate ont:pk ;
         rr:objectMap [ rml:reference "pk" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:sentido ;
+        rr:predicate ont:sentido ;
         rr:objectMap [ rml:reference "sentido" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:tipo ;
+        rr:predicate ont:tipo ;
         rr:objectMap [ rml:reference "tipo" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:carril ;
+        rr:predicate ont:carril ;
         rr:objectMap [ rml:reference "carril" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:longitudInicioTramo ;
+        rr:predicate ont:longitudInicioTramo ;
         rr:objectMap [ rml:reference "Longitud inicio tramo" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:latitudInicioTramo ;
+        rr:predicate ont:latitudInicioTramo ;
         rr:objectMap [ rml:reference "Latitud inicio tramo" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:xWGS84 ;
+        rr:predicate ont:xWGS84 ;
         rr:objectMap [ rml:reference "X (WGS84)" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:yWGS84 ;
+        rr:predicate ont:yWGS84 ;
         rr:objectMap [ rml:reference "Y (WGS84)" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
@@ -78,10 +75,10 @@
         rr:objectMap [ rml:reference "Longitud" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:velocidadLimite ;
+        rr:predicate ont:velocidadLimite ;
         rr:objectMap [ rml:reference "velocidadLimite" ; rr:datatype <http://www.w3.org/2001/XMLSchema#integer> ]
     ];
     rr:predicateObjectMap [
-        rr:predicate ex:responsable ;
+        rr:predicate ont:responsable ;
         rr:objectMap [ rml:reference "responsable" ; rr:datatype <http://www.w3.org/2001/XMLSchema#string> ]
     ] .

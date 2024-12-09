@@ -4,12 +4,14 @@ prefixes:
   rml: <http://semweb.mmlab.be/ns/rml#>
   geo: <http://www.w3.org/2003/01/geo/wgs84_pos#>
   ql: <http://semweb.mmlab.be/ns/ql#>
+  ont: <http://dominiowebsemantica.com/ontology/ont#>
+  resAcc: <http://dominiowebsemantica.com/resource/Accidente/>
 
 mappings:
   RadaresMapping:
     sources:
       - ["csv/RADARES-FIJOS-vDTT-updated.csv~csv"]
-    s: "http://dominiowebsemantica.com/Radar/$(ID)"
+    s: "resRas:$(ID)"
     po:
       - [ ex:id, $(ID) ]
       - [ ex:numRadar, $(numRadar) ]

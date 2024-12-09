@@ -2,7 +2,7 @@ import morph_kgc
 
 import os
 
-mapping_path = "c:/Users/sergi/Documents/Uni/3 Semestre/GC/GitHub/Curso2024-2025-DataScience/HandsOn/Group01/mappings/accidentalidad_mapping2.rml.ttl"
+mapping_path = "HandsOn/Group01/mappings/accidentalidad_mapping-with-links.rml.ttl"
 
 if os.path.exists(mapping_path):
     print(f"El archivo {mapping_path} fue encontrado.")
@@ -17,7 +17,7 @@ config = """
 output_format = N-TRIPLES
 
 [DataSource1]
-mappings = ./HandsOn/Group01/mappings/accidentalidad_mapping.rml.ttl
+mappings = ./HandsOn/Group01/mappings/radares_mapping.rml.ttl
 """
 
 # Materializar el grafo RDF usando la configuración
@@ -31,9 +31,9 @@ config = """
 output_format = N-TRIPLES
 
 [DataSource1]
-mappings = ./HandsOn/Group01/mappings/radares_mapping.rml.ttl
+mappings = HandsOn/Group01/mappings/radares_mapping.rml.ttl
 """
 
 # Materializar el grafo RDF usando la configuración
 rdf_graph = morph_kgc.materialize(config)
-rdf_graph.serialize(destination="radares.nt", format="nt")
+rdf_graph.serialize(destination="rad2.nt", format="nt")

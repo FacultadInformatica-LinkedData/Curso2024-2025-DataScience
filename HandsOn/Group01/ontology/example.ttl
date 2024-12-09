@@ -1,74 +1,74 @@
-@prefix : <http://ws.com/base#> .
-@prefix ns: <http://ws.com/> .
+@prefix base: <http://dominiowebsemantica.com/> .
+@prefix ont: <http://dominiowebsemantica.com/ontologia/ont#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ns:Accidente_2024S000123 a ns:Accidente ;
-    ns:numExpediente "2024S000123" ;
-    ns:Fecha "05-07-2024"^^xsd:date ;
-    ns:Hora "17:45:00"^^xsd:time ;
-    ns:tipoAccidente "Colisión múltiple" ;
-    ns:estadoMeteorologico "Despejado" ;
-    ns:tipoVehiculo "Turismo" ;
-    ns:ubicadoEn ns:Ubicacion_001 ;
-    ns:personaImplicada ns:Persona_001 ;
-    ns:implicaConsumoDe ns:Sustancia_001 .
+ont:Accidente_2024S000123 a ont:Accidente ;
+    ont:numExpediente "2024S000123" ;
+    ont:Fecha "05-07-2024"^^xsd:date ;
+    ont:Hora "17:45:00"^^xsd:time ;
+    ont:tipoAccidente "Colisión múltiple" ;
+    ont:estadoMeteorologico "Despejado" ;
+    ont:tipoVehiculo "Turismo" ;
+    ont:ubicadoEn ont:Ubicacion_001 ;
+    ont:personaImplicada ont:Persona_001 ;
+    ont:implicaConsumoDe ont:Sustancia_001 .
 
-ns:Persona_001 a ns:Persona ;
-    ns:tipoPersona "Conductor" ;
-    ns:rangoEdad "De 30 a 34 años" ;
-    ns:sexo "Hombre" ;
-    ns:tipoLesion ns:Lesion_001 .
+ont:Persona_001 a ont:Persona ;
+    ont:tipoPersona "Conductor" ;
+    ont:rangoEdad "De 30 a 34 años" ;
+    ont:sexo "Hombre" ;
+    ont:tipoLesion ont:Lesion_001 .
 
-ns:Lesion_001 a ns:Lesion ;
-    ns:codigoLesividad 14 ;
-    ns:lesividad "Sin asistencia sanitaria" .
+ont:Lesion_001 a ont:Lesion ;
+    ont:codigoLesividad 14 ;
+    ont:lesividad "Sin asistencia sanitaria" .
 
-ns:Ubicacion_001 a ns:Ubicacion ;
-    ns:localizacion "AUTOV. M-30, 14XL24" ;
-    ns:numero "14XL24";
-    ns:tieneDistrito ns:infoDistrito_12 .
-    ns:tieneCoordenadas ns:Coordenadas_001;
+ont:Ubicacion_001 a ont:Ubicacion ;
+    ont:localizacion "AUTOV. M-30, 14XL24" ;
+    ont:numero "14XL24";
+    ont:tieneDistrito ont:infoDistrito_12 .
+    ont:tieneCoordenadas ont:Coordenadas_001;
 
-ns:Coordenadas_001 a ns:Coordenadas ;
-    ns:coordenadaX "440425" ;
-    ns:coordenadaY "4471576" .
+ont:Coordenadas_001 a ont:Coordenadas ;
+    ont:coordenadaX "440425" ;
+    ont:coordenadaY "4471576" .
 
-ns:Sustancia_001 a ns:Sustancia ;
-    ns:positivaAlcohol "N" ;
-    ns:positivaDroga "NULL";
+ont:Sustancia_001 a ont:Sustancia ;
+    ont:positivaAlcohol "N" ;
+    ont:positivaDroga "NULL";
 
-ns:infoDistrito_12 a ns:infoDistrito ;
-    ns:codDistrito 12 ;
-    ns:distrito "USERA" .
+ont:infoDistrito_12 a ont:infoDistrito ;
+    ont:codDistrito 12 ;
+    ont:distrito "USERA" .
 
-ns:Radar_M30_12 a ns:Radar ;
-    ns:numRadar "28" ;
-    ns:tipo "Radar de tramo" ;
-    ns:velocidadLimite 50 ;
-    ns:responsable "DGP" ;
-    ns:ubicadoEn ns:Localizacion_Radar_001 .
+ont:Radar_M30_12 a ont:Radar ;
+    ont:numRadar "28" ;
+    ont:tipo "Radar de tramo" ;
+    ont:velocidadLimite 50 ;
+    ont:responsable "DGP" ;
+    ont:ubicadoEn ont:Localizacion_Radar_001 .
 
-ns:Localizacion_Radar_001 a ns:Localizacion ;
-    ns:ubicacion "AVENIDA DE CÓRDOBA CON CALLE DOCTOR TOLOSA LATOUR, SENTIDO GLORIETA DE MÁLAGA" ;
-    ns:implica ns:InfoCarretera_001.
+ont:Localizacion_Radar_001 a ont:Localizacion ;
+    ont:ubicacion "AVENIDA DE CÓRDOBA CON CALLE DOCTOR TOLOSA LATOUR, SENTIDO GLORIETA DE MÁLAGA" ;
+    ont:implica ont:InfoCarretera_001.
 
-ns:InfoCarretera_001 a ns:InfoCarretera ;
-    ns:carretera "AVENIDA DE CÓRDOBA" ;
-    ns:pk "300" ;
-    ns:sentido "Salida" ;
-    ns:carril "Salida, radar de tramo" .
-    ns:tiene ns:inicioTramo001
+ont:InfoCarretera_001 a ont:InfoCarretera ;
+    ont:carretera "AVENIDA DE CÓRDOBA" ;
+    ont:pk "300" ;
+    ont:sentido "Salida" ;
+    ont:carril "Salida, radar de tramo" .
+    ont:tiene ont:inicioTramo001
 
 
-ns:Coordenadas_002 a ns:inicioTramo ;
-    ns:coordenadaX -3699380 ;
-    ns:coordenadaY 40387572 .
+ont:Coordenadas_002 a ont:inicioTramo ;
+    ont:coordenadaX -3699380 ;
+    ont:coordenadaY 40387572 .
     
-ns:Coordenadas_002 a ns:CoordenadaWGS84 ;
-    ns:coordenadaX 44087300 ;
-    ns:coordenadaY 447002529 .
+ont:Coordenadas_002 a ont:CoordenadaWGS84 ;
+    ont:coordenadaX 44087300 ;
+    ont:coordenadaY 447002529 .
 
-ns:Coordenadas_002 a ns:CoordenadasLongLat ;
-    ns:coordenadaX -3696519 ;
-    ns:coordenadaY 40378590 .
+ont:Coordenadas_002 a ont:CoordenadasLongLat ;
+    ont:coordenadaX -3696519 ;
+    ont:coordenadaY 40378590 .
 

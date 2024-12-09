@@ -1,6 +1,6 @@
-@prefix : <http://dominiowebsemantica.com/base#> .
+@prefix : <http://dominiowebsemantica.com/> .
 @prefix mod: <https://w3id.org/mod#> .
-@prefix ns: <http://dominiowebsemantica.com/> .
+@prefix ont: <http://www.dominiowebsemant.com/ontologia/ont#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -8,195 +8,161 @@
 : a owl:Ontology ;
     mod:createdWith <https://chowlk.linkeddata.es/> .
 
-ns:Fecha a owl:DatatypeProperty ;
-    rdfs:label "fecha" ;
-    rdfs:domain ns:Accidente .
+ont:accUbicadoEn a owl:ObjectProperty ;
+    rdfs:label "acc ubicado en" ;
+    rdfs:domain ont:Accidente ;
+    rdfs:range ont:Ubicación .
 
-ns:Hora a owl:DatatypeProperty ;
-    rdfs:label "hora" ;
-    rdfs:domain ns:Accidente .
-
-ns:carretera a owl:DatatypeProperty ;
+ont:carretera a owl:DatatypeProperty ;
     rdfs:label "carretera" ;
-    rdfs:domain ns:InfoCarretera .
+    rdfs:domain ont:InfoCarretera .
 
-ns:carril a owl:DatatypeProperty ;
+ont:carril a owl:DatatypeProperty ;
     rdfs:label "carril" ;
-    rdfs:domain ns:InfoCarretera .
+    rdfs:domain ont:InfoCarretera .
 
-ns:codDistrito a owl:DatatypeProperty ;
+ont:codDistrito a owl:DatatypeProperty ;
     rdfs:label "cod distrito" ;
-    rdfs:domain ns:infoDistrito .
+    rdfs:domain ont:InfoDistrito .
 
-ns:codigoLesividad a owl:DatatypeProperty ;
-    rdfs:label "codigo lesividad" ;
-    rdfs:domain ns:Lesion ;
+ont:cod_lesividad a owl:DatatypeProperty ;
+    rdfs:label "cod_lesividad" ;
+    rdfs:domain ont:Persona ;
     rdfs:range xsd:int .
 
-ns:coordenadaX a owl:DatatypeProperty ;
-    rdfs:label "coordenada x" .
+ont:coordenadaX a owl:DatatypeProperty ;
+    rdfs:label "coordenada x" ;
+    rdfs:domain ont:InfoCarretera,
+        ont:Ubicación .
 
-ns:coordenadaY a owl:DatatypeProperty ;
-    rdfs:label "coordenada y" .
+ont:coordenadaY a owl:DatatypeProperty ;
+    rdfs:label "coordenada y" ;
+    rdfs:domain ont:InfoCarretera,
+        ont:Ubicación .
 
-ns:distrito a owl:DatatypeProperty ;
+ont:distrito a owl:DatatypeProperty ;
     rdfs:label "distrito" ;
-    rdfs:domain ns:infoDistrito .
+    rdfs:domain ont:InfoDistrito .
 
-ns:estadoMeteorologico a owl:DatatypeProperty ;
+ont:edad_max a owl:DatatypeProperty ;
+    rdfs:label "edad_max" ;
+    rdfs:domain ont:Persona .
+
+ont:edad_min a owl:DatatypeProperty ;
+    rdfs:label "edad_min" ;
+    rdfs:domain ont:Persona .
+
+ont:estadoMeteorologico a owl:DatatypeProperty ;
     rdfs:label "estado meteorologico" ;
-    rdfs:domain ns:Accidente .
+    rdfs:domain ont:Accidente .
 
-ns:implica a owl:ObjectProperty ;
-    rdfs:label "implica" ;
-    rdfs:domain ns:Localizacion ;
-    rdfs:range ns:InfoCarretera .
+ont:fecha_hora a owl:DatatypeProperty ;
+    rdfs:label "fecha_hora" ;
+    rdfs:domain ont:Accidente .
 
-ns:lesividad a owl:DatatypeProperty ;
+ont:lesividad a owl:DatatypeProperty ;
     rdfs:label "lesividad" ;
-    rdfs:domain ns:Lesion .
+    rdfs:domain ont:Persona .
 
-ns:localizacion a owl:DatatypeProperty ;
+ont:localizacion a owl:DatatypeProperty ;
     rdfs:label "localizacion" ;
-    rdfs:domain ns:Ubicación .
+    rdfs:domain ont:Ubicación .
 
-ns:numExpediente a owl:DatatypeProperty ;
+ont:numExpediente a owl:DatatypeProperty ;
     rdfs:label "num expediente" ;
-    rdfs:domain ns:Accidente .
+    rdfs:domain ont:Accidente .
 
-ns:numRadar a owl:DatatypeProperty ;
+ont:numRadar a owl:DatatypeProperty ;
     rdfs:label "num radar" ;
-    rdfs:domain ns:Radar .
+    rdfs:domain ont:Radar .
 
-ns:numero a owl:DatatypeProperty ;
+ont:numero a owl:DatatypeProperty ;
     rdfs:label "numero" ;
-    rdfs:domain ns:Ubicación .
+    rdfs:domain ont:Ubicación .
 
-ns:personaImplicada a owl:ObjectProperty ;
+ont:personaImplicada a owl:ObjectProperty ;
     rdfs:label "persona implicada" ;
-    rdfs:domain ns:Accidente ;
-    rdfs:range ns:Persona .
+    rdfs:domain ont:Accidente ;
+    rdfs:range ont:Persona .
 
-ns:pk a owl:DatatypeProperty ;
+ont:pk a owl:DatatypeProperty ;
     rdfs:label "pk" ;
-    rdfs:domain ns:InfoCarretera .
+    rdfs:domain ont:InfoCarretera .
 
-ns:positivaAlcohol a owl:DatatypeProperty ;
+ont:positivaAlcohol a owl:DatatypeProperty ;
     rdfs:label "positiva alcohol" ;
-    rdfs:domain ns:Sustancia .
+    rdfs:domain ont:Accidente .
 
-ns:positivaDroga a owl:DatatypeProperty ;
+ont:positivaDroga a owl:DatatypeProperty ;
     rdfs:label "positiva droga" ;
-    rdfs:domain ns:Sustancia .
+    rdfs:domain ont:Accidente .
 
-ns:rangoEdad a owl:DatatypeProperty ;
-    rdfs:label "rango edad" ;
-    rdfs:domain ns:Persona .
+ont:radarUbicadoEn a owl:ObjectProperty ;
+    rdfs:label "radar ubicado en" ;
+    rdfs:domain ont:Radar ;
+    rdfs:range ont:InfoCarretera .
 
-ns:responsable a owl:DatatypeProperty ;
+ont:responsable a owl:DatatypeProperty ;
     rdfs:label "responsable" ;
-    rdfs:domain ns:Radar .
+    rdfs:domain ont:Radar .
 
-ns:sentido a owl:DatatypeProperty ;
+ont:sentido a owl:DatatypeProperty ;
     rdfs:label "sentido" ;
-    rdfs:domain ns:InfoCarretera .
+    rdfs:domain ont:InfoCarretera .
 
-ns:sexo a owl:DatatypeProperty ;
+ont:sexo a owl:DatatypeProperty ;
     rdfs:label "sexo" ;
-    rdfs:domain ns:Persona .
+    rdfs:domain ont:Persona .
 
-ns:tiene a owl:ObjectProperty ;
-    rdfs:label "tiene" ;
-    rdfs:domain ns:InfoCarretera ;
-    rdfs:range ns:CoordenadaWGS84,
-        ns:CoordenadasLongLat,
-        ns:inicioTramo .
-
-ns:tieneCoordenadas a owl:ObjectProperty ;
-    rdfs:label "tiene coordenadas" ;
-    rdfs:domain ns:Ubicación ;
-    rdfs:range ns:Coordenadas .
-
-ns:tieneDistrito a owl:ObjectProperty ;
+ont:tieneDistrito a owl:ObjectProperty ;
     rdfs:label "tiene distrito" ;
-    rdfs:domain ns:Ubicación ;
-    rdfs:range ns:infoDistrito .
+    rdfs:domain ont:Ubicación ;
+    rdfs:range ont:InfoDistrito .
 
-ns:tipo a owl:DatatypeProperty ;
+ont:tipo a owl:DatatypeProperty ;
     rdfs:label "tipo" ;
-    rdfs:domain ns:Radar .
+    rdfs:domain ont:Radar .
 
-ns:tipoAccidente a owl:DatatypeProperty ;
+ont:tipoAccidente a owl:DatatypeProperty ;
     rdfs:label "tipo accidente" ;
-    rdfs:domain ns:Accidente .
+    rdfs:domain ont:Accidente .
 
-ns:tipoLesion a owl:ObjectProperty ;
-    rdfs:label "tipo lesion" ;
-    rdfs:domain ns:Persona ;
-    rdfs:range ns:Lesion .
-
-ns:tipoPersona a owl:DatatypeProperty ;
+ont:tipoPersona a owl:DatatypeProperty ;
     rdfs:label "tipo persona" ;
-    rdfs:domain ns:Persona .
+    rdfs:domain ont:Persona .
 
-ns:tipoVehiculo a owl:DatatypeProperty ;
+ont:tipoVehiculo a owl:DatatypeProperty ;
     rdfs:label "tipo vehiculo" ;
-    rdfs:domain ns:Accidente .
+    rdfs:domain ont:Accidente .
 
-ns:ubicacion a owl:DatatypeProperty ;
+ont:ubicacion a owl:DatatypeProperty ;
     rdfs:label "ubicacion" ;
-    rdfs:domain ns:Localizacion .
+    rdfs:domain ont:InfoCarretera .
 
-ns:ubicadoEn a owl:ObjectProperty ;
-    rdfs:label "ubicado en" ;
-    rdfs:domain ns:Accidente,
-        ns:Radar ;
-    rdfs:range ns:Localizacion,
-        ns:Ubicación .
-
-ns:velocidadLimite a owl:DatatypeProperty ;
+ont:velocidadLimite a owl:DatatypeProperty ;
     rdfs:label "velocidad limite" ;
-    rdfs:domain ns:Radar .
+    rdfs:domain ont:Radar .
 
-rdfs:Class a owl:Class ;
-    rdfs:label "Class" .
+ont:infoVial a owl:Class ;
+    rdfs:label "info Vial" .
 
-ns:CoordenadaWGS84 a owl:Class ;
-    rdfs:label "Coordenada W G S84" .
+ont:InfoDistrito a owl:Class ;
+    rdfs:label "Info Distrito" .
 
-ns:Coordenadas a owl:Class ;
-    rdfs:label "Coordenadas" .
+ont:Radar a owl:Class ;
+    rdfs:label "Radar" ;
+    rdfs:subClassOf ont:infoVial .
 
-ns:CoordenadasLongLat a owl:Class ;
-    rdfs:label "Coordenadas Long Lat" .
-
-ns:inicioTramo a owl:Class ;
-    rdfs:label "inicio Tramo" .
-
-ns:Sustancia a owl:Class ;
-    rdfs:label "Sustancia" .
-
-ns:Lesion a owl:Class ;
-    rdfs:label "Lesion" .
-
-ns:Localizacion a owl:Class ;
-    rdfs:label "Localizacion" .
-
-ns:infoDistrito a owl:Class ;
-    rdfs:label "info Distrito" .
-
-ns:Persona a owl:Class ;
-    rdfs:label "Persona" .
-
-ns:Radar a owl:Class ;
-    rdfs:label "Radar" .
-
-ns:Ubicación a owl:Class ;
+ont:Ubicación a owl:Class ;
     rdfs:label "Ubicación" .
 
-ns:InfoCarretera a owl:Class ;
+ont:Persona a owl:Class ;
+    rdfs:label "Persona" .
+
+ont:InfoCarretera a owl:Class ;
     rdfs:label "Info Carretera" .
 
-ns:Accidente a owl:Class ;
-    rdfs:label "Accidente" .
+ont:Accidente a owl:Class ;
+    rdfs:label "Accidente" ;
+    rdfs:subClassOf ont:infoVial .
 
