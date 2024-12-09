@@ -1,0 +1,26 @@
+  SELECT ?station ?code ?name ?latitude ?longitude
+  WHERE {
+    ?station a ns:Estación ;
+             ns:codigoEstacion ?code ;
+             ns:nombreEstacion ?name ;
+             ns:latitud ?latitude ;
+             ns:longitud ?longitude .
+  }
+
+  SELECT ?nucleo ?nucleoName ?station
+  WHERE {
+      ?nucleo a ns:NucleoCercanias ;
+      ns:nombreNucleo ?nucleoName .
+      ?station ns:tieneNucleo ?nucleo .
+  }
+
+
+  SELECT ?station ?stationName ?address ?addressName
+  WHERE {
+    ?station a ns:Estación ;
+             ns:nombreEstacion ?stationName ;
+             ns:localizadoEn ?address .
+    ?address ns:nombreDireccion ?addressName .
+  }
+
+  

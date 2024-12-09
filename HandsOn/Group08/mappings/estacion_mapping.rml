@@ -309,29 +309,29 @@ map:rules_000 <http://rdfs.org/ns/void#exampleResource> map:map_direccion_mappin
 	rdf:type <http://rdfs.org/ns/void#Dataset> .
 
 map:s_000 rdf:type rr:SubjectMap ;
-	rr:template "http://websemantica/base#Estacion/{CÓDIGO}~iri" .
+	rr:template "http://websemantica/base#Estacion/{CÓDIGO}" .
 
 map:s_001 rdf:type rr:SubjectMap ;
-	rr:template "http://websemantica/base#Nucleo/{NUCLEO_CERCANIAS}~iri" .
+	rr:template "http://websemantica/base#Nucleo/{NUCLEO_CERCANIAS}" .
 
 map:s_002 rdf:type rr:SubjectMap ;
-	rr:template "http://websemantica/base#Direccion/{CÓDIGO}~iri" .
+	rr:template "http://websemantica/base#Direccion/{CÓDIGO}" .
 
 map:s_003 rdf:type rr:SubjectMap ;
-	rr:template "http://websemantica/base#Poblacion/{POBLACION}~iri" .
+	rr:template "http://websemantica/base#Poblacion/{POBLACION}" .
 
 map:s_004 rdf:type rr:SubjectMap ;
-	rr:template "http://websemantica/base#Tramo/{TRAMO_ID}~iri" .
+	rr:template "http://websemantica/base#Tramo/{TRAMO_ID}" .
 
 map:s_005 rdf:type rr:SubjectMap ;
-	rr:template "http://websemantica/base#Provincia/{POBLACION}~iri" .
+	rr:template "http://websemantica/base#Provincia/{POBLACION}" .
 
 map:source_000 rml:referenceFormulation ql:CSV ;
 	rml:source "estaciones_updated.csv" ;
 	rdf:type rml:LogicalSource .
 
 map:source_001 rml:referenceFormulation ql:CSV ;
-	rml:source "malaga_viajeros_por_franja_csv.csv" ;
+	rml:source "malaga-viajeros-por-franja-csv.-updated.csv" ;
 	rdf:type rml:LogicalSource .
 
 map:source_002 rml:referenceFormulation ql:CSV ;
@@ -343,7 +343,7 @@ map:source_003 rml:referenceFormulation ql:CSV ;
 	rdf:type rml:LogicalSource .
 
 map:source_004 rml:referenceFormulation ql:CSV ;
-	rml:source "malaga_viajeros_por_franja_csv.csv" ;
+	rml:source "malaga-viajeros-por-franja-csv.-updated.csv" ;
 	rdf:type rml:LogicalSource .
 
 map:source_005 rml:referenceFormulation ql:CSV ;

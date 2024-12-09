@@ -26,7 +26,7 @@ mappings:
       
   nucleo_mapping:
     sources:
-      - [malaga_viajeros_por_franja_csv.csv~csv]
+      - [malaga-viajeros-por-franja-csv.-updated.csv~csv]
     s: "http://websemantica/base#Nucleo/$(NUCLEO_CERCANIAS)~iri"
     po:
       - [a, ns:NucleoCercanias]
@@ -52,7 +52,7 @@ mappings:
 
   tramo_mapping:
     sources:
-      - [malaga_viajeros_por_franja_csv.csv~csv]
+      - [malaga-viajeros-por-franja-csv.-updated.csv~csv]
     s: "http://websemantica/base#Tramo/$(TRAMO_ID)~iri"
     po:
       - [a, ns:Tramo]
