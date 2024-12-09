@@ -185,20 +185,50 @@
         </p>
         <ul>
             <li>
-                <strong>Creación de clases y propiedades(<code>clpr</code>)</strong>: 
-                <a href="http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties#>">
-                    http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties#
+                <strong>Creación de clases y propiedades (<code>clpr</code>)</strong>: 
+                <a href="http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties/">
+                    http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties/
                 </a>
             </li>
             <li>
                 <strong>Creación de instancias (<code>is</code>)</strong>:
-                <a href="http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#">
-                    http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#
+                <a href="http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/">
+                    http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/
                 </a>
             </li>
         </ul>
+        <p>
+            Para garantizar que cada recurso tenga una URI única, las instancias se generarán siguiendo la estructura:
+        </p>
+        <ul>
+            <li>
+                <code>http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/&lt;clase&gt;/&lt;identificador&gt;</code>
+            </li>
+        </ul>
+        <p>
+            Aquí, <code>&lt;clase&gt;</code> representa el tipo de recurso (por ejemplo, <code>direccion</code>, <code>municipio</code>, <code>especialidad</code>).
+            Por ejemplo:
+        </p>
+        <ul>
+            <li>
+                Para una dirección: 
+                <code>http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/direccion/</code>
+            </li>
+            <li>
+                Para un municipio: 
+                <code>http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/municipio/</code>
+            </li>
+            <li>
+                Para una especialidad: 
+                <code>http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/especialidad/</code>
+            </li>
+        </ul>
+        <p>
+            Este enfoque asegura que las URI sean únicas, fácilmente legibles y adecuadas para su uso en un grafo de conocimiento.
+        </p>
     </div>
 </div>
+
 
 </body>
 </html>

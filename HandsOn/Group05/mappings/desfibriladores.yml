@@ -3,8 +3,8 @@ prefixes:
   rml: "http://semweb.mmlab.be/ns/rml#"
   ql: "http://semweb.mmlab.be/ns/rml#ql#"
   xsd: "http://www.w3.org/2001/XMLSchema#"
-  clpr: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties#"
-  is: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#"
+  clpr: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/classesproperties/"
+  is: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/"
   rdfs: "http://www.w3.org/2000/01/rdf-schema#"
 
 mappings:
@@ -13,7 +13,7 @@ mappings:
       source: "desfibriladores-updated.csv"
       referenceFormulation: ql:CSV
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#desfibrilador_{codigo_dea}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/desfibrilador_{codigo_dea}"
       class: clpr:Desfibrilador
     predicateObjectMaps:
       - predicate: clpr:idDesfibrilador
@@ -21,14 +21,14 @@ mappings:
           reference: "codigo_dea"
       - predicate: clpr:albergadoEn
         objectMap:
-          template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#establecimiento_{codigo_dea}"
+          template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/establecimiento_{codigo_dea}"
 
   EstablecimientoMapping:
     logicalSource:
       source: "desfibriladores-updated.csv"
       referenceFormulation: ql:CSV
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#establecimiento_{codigo_dea}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/establecimiento_{codigo_dea}"
       class: clpr:Establecimiento
     predicateObjectMaps:
       - predicate: clpr:tipoEstablecimiento
@@ -43,7 +43,7 @@ mappings:
       source: "desfibriladores-updated.csv"
       referenceFormulation: ql:CSV
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{direccion_completa}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{direccion_completa}"
       class: clpr:Direccion
     predicateObjectMaps:
       - predicate: rdfs:label
@@ -76,14 +76,14 @@ mappings:
           datatype: xsd:integer
       - predicate: clpr:perteneceA
         objectMap:
-          template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{municipio_nombre}"
+          template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{municipio_nombre}"
 
   MunicipiosMapping:
     logicalSource:
       source: "desfibriladores-updated.csv"
       referenceFormulation: ql:CSV
     subjectMap:
-      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances#{municipio_nombre}"
+      template: "http://www.knowledgegraphs.com/ontology/centrosydesfibriladores/instances/{municipio_nombre}"
       class: clpr:Municipio
     predicateObjectMaps:
       - predicate: rdfs:label
