@@ -1,0 +1,37 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "name": "schema:name",
+    "hometown": "schema:addressLocality",
+    "age": "schema:age",
+    "almaMater": "schema:alumniOf",
+    "parents": "schema:parent",
+    "subjects": {
+      "@id": "schema:Course",
+      "@container": "@set"
+    }
+  },
+  "@type": "schema:Person",
+  "name": "Gerardo Harguindey",
+  "hometown": "Madrid",
+  "age": 19,
+  "almaMater": "Universidad Politécnica de Madrid",
+  "parents": [
+    "Pepe",
+    "Ana"
+  ],
+  "subjects": [
+    {
+      "@type": "schema:Course",
+      "name": "Web Semántica, Linked Data y Grafos de Conocimiento",
+      "teacher": "Oscar Corcho",
+      "description": "3 créditos"
+    },
+    {
+      "@type": "schema:Course",
+      "name": "Cálculo I",
+      "teacher": "Juan Rojo",
+      "description": "6 créditos"
+    }
+  ]
+}
